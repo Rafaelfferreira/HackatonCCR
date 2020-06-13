@@ -41,12 +41,23 @@ extension  CardViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("FoundElementsTableViewCell", owner: self, options: nil)?.first as! FoundElementsTableViewCell
+        cell.place = Place(name: "Graal 56 (Sul)", percentOfLike: "98% acharam bom", address: "Rod. dos Bandeirantes, Km 56 Chácara Malota, Jundiaí - SP, 13211-510", phone: "+55 (11) 45318612", favorite: false, good_bad: false)
         // set cell information
-        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsViewController = Bundle.main.loadNibNamed("DetailsViewController", owner: self, options: nil)
+            if let cell = tableView.cellForRow(at: indexPath) as? FoundElementsTableViewCell {
+                let viewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+                viewController.place = cell.place
+                if let navigator = self.navigationController {
+                    navigator.pushViewController(viewController, animated: true)
+                }
+            }
+        }
     
 }

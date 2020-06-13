@@ -13,6 +13,7 @@ class FoundElementsTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var percentOfLikeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    var place: Place!
     
     override func awakeFromNib() {
         super.awakeFromNib()
