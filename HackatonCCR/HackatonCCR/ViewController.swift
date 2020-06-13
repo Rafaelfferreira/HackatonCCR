@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var cardHandleAreaHeight: CGFloat = 80
     
     var cardVisible = false
+    
     var nextState:CardState {
         return cardVisible ? .collapsed : .expanded
     }
@@ -47,8 +48,8 @@ class ViewController: UIViewController {
         
         cardViewController.view.clipsToBounds = true
     
-        let tapGestureReconizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleCardTap(reconizer:)))
-        let panGestureReconizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.handleCardPan(reconizer:)))
+        let tapGestureReconizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleCardTap(recognizer:)))
+        let panGestureReconizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.handleCardPan(recognizer:)))
         
         cardViewController.handleArea.addGestureRecognizer(tapGestureReconizer)
         cardViewController.handleArea.addGestureRecognizer(panGestureReconizer)
@@ -56,16 +57,25 @@ class ViewController: UIViewController {
     }
     
     @objc
-    func handleCardTap(reconizer:UITapGestureRecognizer) {
+    func handleCardTap(recognizer: UITapGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+        default:
+            break
+        }
     }
     
     @objc
-    func handleCardPan(reconizer:UIPanGestureRecognizer) {
-        switch reconizer.state {
+    func handleCardPan(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
         case .began:
             startInteractiveTransition(state: nextState, duration: 0.9)
         case .changed:
-            updateInteractiveTransition(fractionCompleted: 0)
+            let translation = recognizer.translation(in: self.cardViewController.handleArea)
+            var fractionComplete = translation.y / cardHeight
+            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
+            updateInteractiveTransition(fractionCompleted: fractionComplete)
         case .ended:
             continueInteractiveTransition()
         default:
@@ -73,7 +83,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func animateTransitionIfNedded(state: CardState, duration: TimeInterval){
+    func animateTransitionIfNeeded(state: CardState, duration: TimeInterval){
         if runningAnimations.isEmpty {
             let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
@@ -83,12 +93,46 @@ class ViewController: UIViewController {
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHandleAreaHeight
                 }
             }
+            
+            frameAnimator.addCompletion { _ in
+                self.cardVisible = !self.cardVisible
+                self.runningAnimations.removeAll()
+            }
+            
+            frameAnimator.startAnimation()
+            runningAnimations.append(frameAnimator)
+            
+            
+            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.layer.cornerRadius = 12
+                case .collapsed:
+                    self.cardViewController.view.layer.cornerRadius = 0
+                }
+            }
+            
+            cornerRadiusAnimator.startAnimation()
+            runningAnimations.append(cornerRadiusAnimator)
+            
+            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+                switch state {
+                case .expanded:
+                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
+                case .collapsed:
+                    self.visualEffectView.effect = nil
+                }
+            }
+            
+            blurAnimator.startAnimation()
+            runningAnimations.append(blurAnimator)
+            
         }
     }
     
     func startInteractiveTransition(state: CardState, duration: TimeInterval){
         if runningAnimations.isEmpty {
-            animateTransitionIfNedded(state: state, duration: duration)
+            animateTransitionIfNeeded(state: state, duration: duration)
         }
         for animator in runningAnimations {
             animator.pauseAnimation()
