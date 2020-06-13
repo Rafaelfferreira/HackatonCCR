@@ -14,12 +14,12 @@ class ViewController: UIViewController {
         case expanded
         case collapsed
     }
-
+    
     var cardViewController: CardViewController!
     var visualEffectView: UIVisualEffectView!
     
-    var cardHeight: CGFloat = 600
-    var cardHandleAreaHeight: CGFloat = 80
+    var cardHeight: CGFloat = 405
+    var cardHandleAreaHeight: CGFloat = 106
     
     var cardVisible = false
     
@@ -47,7 +47,8 @@ class ViewController: UIViewController {
         cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
         
         cardViewController.view.clipsToBounds = true
-    
+        cardViewController.view.layer.cornerRadius = 12
+        
         let tapGestureReconizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleCardTap(recognizer:)))
         let panGestureReconizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.handleCardPan(recognizer:)))
         
@@ -103,17 +104,17 @@ class ViewController: UIViewController {
             runningAnimations.append(frameAnimator)
             
             
-            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
-                switch state {
-                case .expanded:
-                    self.cardViewController.view.layer.cornerRadius = 12
-                case .collapsed:
-                    self.cardViewController.view.layer.cornerRadius = 0
-                }
-            }
-            
-            cornerRadiusAnimator.startAnimation()
-            runningAnimations.append(cornerRadiusAnimator)
+//            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+//                switch state {
+//                case .expanded:
+//                    self.cardViewController.view.layer.cornerRadius = 12
+//                case .collapsed:
+//                    self.cardViewController.view.layer.cornerRadius = 0
+//                }
+//            }
+//
+//            cornerRadiusAnimator.startAnimation()
+//            runningAnimations.append(cornerRadiusAnimator)
             
             let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
