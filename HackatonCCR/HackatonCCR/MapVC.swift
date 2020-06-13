@@ -27,7 +27,8 @@ class MapVC: UIViewController {
     var searchController: UISearchController?
     var resultView: UITextView?
     
-    let searchBarColor: UIColor = #colorLiteral(red: 0.9557622145, green: 0.9557622145, blue: 0.9557622145, alpha: 1)
+    //FIXME: - Teste networking
+    let geocodeQueryService = GeocodeQueryService()
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationItem.backBarButtonItem?.title = "Test"
@@ -36,7 +37,7 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        
         mapView.settings.compassButton = true;
         
         // Liberando localizacao do usuario
@@ -64,6 +65,12 @@ class MapVC: UIViewController {
         
         //FIXME: - testando adicionar os markers, colocar em algum lugar que faca sentido depois
         addMarkerToMap(latitude: (locationManager.location?.coordinate.latitude)! - 0.003, longitude: (locationManager.location?.coordinate.longitude)!, markerText: "Teste")
+        
+        //FIXME: - Testando o networking
+        geocodeQueryService.getGeocodeByAddress(address: "24%20Sussex%20Drive%20Ottawa%20ON", completion: { (geocode, error) in
+            print("E ai")
+
+        })
     }
     
     func getCurrentLocation() {
