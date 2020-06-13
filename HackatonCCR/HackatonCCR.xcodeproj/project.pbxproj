@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -76,17 +76,49 @@
 		049E2DD2249420CE00CD7705 /* HackatonCCR */ = {
 			isa = PBXGroup;
 			children = (
-				049E2DD3249420CE00CD7705 /* AppDelegate.swift */,
-				049E2DD5249420CE00CD7705 /* SceneDelegate.swift */,
-				049E2DD7249420CE00CD7705 /* ViewController.swift */,
-				60B8B0CA24950B3800C2D4AE /* CardViewController.swift */,
-				049E2DD9249420CE00CD7705 /* Main.storyboard */,
-				049E2DDC249420D300CD7705 /* Assets.xcassets */,
-				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
 				049E2DE1249420D300CD7705 /* Info.plist */,
-				60B8B0C82495075500C2D4AE /* CardViewController.xib */,
+				6036729224956216003CF6DB /* Suport */,
+				60367290249561CA003CF6DB /* View */,
 			);
 			path = HackatonCCR;
+			sourceTree = "<group>";
+		};
+		60367290249561CA003CF6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				603672942495625C003CF6DB /* MainView */,
+				603672932495624B003CF6DB /* CardView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6036729224956216003CF6DB /* Suport */ = {
+			isa = PBXGroup;
+			children = (
+				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
+				049E2DD3249420CE00CD7705 /* AppDelegate.swift */,
+				049E2DD5249420CE00CD7705 /* SceneDelegate.swift */,
+				049E2DDC249420D300CD7705 /* Assets.xcassets */,
+			);
+			path = Suport;
+			sourceTree = "<group>";
+		};
+		603672932495624B003CF6DB /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				60B8B0CA24950B3800C2D4AE /* CardViewController.swift */,
+				60B8B0C82495075500C2D4AE /* CardViewController.xib */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		603672942495625C003CF6DB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				049E2DD7249420CE00CD7705 /* ViewController.swift */,
+				049E2DD9249420CE00CD7705 /* Main.storyboard */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		AB7736831F5B1B3A5ED58ACA /* Frameworks */ = {
