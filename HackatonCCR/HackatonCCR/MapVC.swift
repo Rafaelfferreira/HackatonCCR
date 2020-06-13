@@ -10,25 +10,51 @@ import Foundation
 import UIKit
 import GoogleMaps
 import CoreLocation
+import GooglePlaces
 
 class MapVC: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     
     let locationManager = CLLocationManager();
-    var currentMarkers: [GMSMarker] = [];
     
-    var markerSize: Int = 35;
+    // var associated with markers
+    var currentMarkers: [GMSMarker] = [];
+    var markerSize: Double = 35;
+    
+    // var associated with search bar
+    var resultsViewController: GMSAutocompleteResultsViewController?
+    var searchController: UISearchController?
+    var resultView: UITextView?
+    
+    let searchBarColor: UIColor = #colorLiteral(red: 0.9557622145, green: 0.9557622145, blue: 0.9557622145, alpha: 1)
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationItem.backBarButtonItem?.title = "Test"
+        print("passou por aqui")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Google maps sdk: compass
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         mapView.settings.compassButton = true;
         
-        // Google maps sdk: Users location
+        // Liberando localizacao do usuario
         mapView.settings.myLocationButton = true;
         mapView.isMyLocationEnabled = true
+        
+        // Integrando a search bar
+        resultsViewController = GMSAutocompleteResultsViewController()
+        resultsViewController?.delegate = self
+        
+        searchController = UISearchController(searchResultsController: resultsViewController)
+        searchController?.searchResultsUpdater = resultsViewController
+        
+        searchController?.searchBar.sizeToFit()
+        navigationItem.titleView = searchController?.searchBar
+        searchController?.hidesNavigationBarDuringPresentation = false
+        
+        definesPresentationContext = true
         
         // Inicializando o aplicativo na posicao atual do usuario
         getCurrentLocation();
@@ -36,7 +62,7 @@ class MapVC: UIViewController {
         let camera = GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!, zoom: 15);
         mapView.camera = camera;
         
-        //testando adicionar os markers
+        //FIXME: - testando adicionar os markers, colocar em algum lugar que faca sentido depois
         addMarkerToMap(latitude: (locationManager.location?.coordinate.latitude)! - 0.003, longitude: (locationManager.location?.coordinate.longitude)!, markerText: "Teste")
     }
     
@@ -63,6 +89,32 @@ class MapVC: UIViewController {
     }
 }
 
+// MARK: - Integrando a search bar a tela
+extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
+    //MARK: - Customizando a aparencia da searchbar
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
+        searchController?.isActive = false
+        //FIXME: - Fazer algo com isso depois inferno
+        print("Place name: \(String(describing: place.name))")
+        print("Place address: \(String(describing: place.formattedAddress))")
+        print("Place attributions: \(String(describing: place.attributions))")
+    }
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
+        print("Deu errado, segue o erro: ", error.localizedDescription)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
+      UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+
+    func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
+      UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
+
 extension MapVC: CLLocationManagerDelegate {
     // MARK: - Metodo chamado sempre que a localizacao do usuario mudar
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -70,6 +122,7 @@ extension MapVC: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - Extensao para alterar o tamanho default dos markers no mapa
 extension GMSMarker {
     func setIconSize(scaledToSize newSize: CGSize) {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)

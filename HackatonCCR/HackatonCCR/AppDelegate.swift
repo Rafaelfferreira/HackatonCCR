@@ -20,7 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // API Key - AIzaSyAJmfFIh7snn43t3_yJ0IWHE7PzqtDkCAM
         GMSServices.provideAPIKey("AIzaSyAJmfFIh7snn43t3_yJ0IWHE7PzqtDkCAM")
-        GMSPlacesClient.provideAPIKey("AIzaSyAJmfFIh7snn43t3_yJ0IWHE7PzqtDkCAM")
+        GMSPlacesClient.provideAPIKey("AIzaSyBW83BvH2RsLsrxlA7bXLsO4Q_YkynHnGk")
+        
+        // MARK: - Configurango a aparencia da searchbar
+//        let BarButtonItemAppearance = UIBarButtonItem.appearance()
+//        BarButtonItemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+        
         return true
     }
 
