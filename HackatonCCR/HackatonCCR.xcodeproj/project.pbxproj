@@ -13,6 +13,8 @@
 		049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DD9249420CE00CD7705 /* Main.storyboard */; };
 		049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDC249420D300CD7705 /* Assets.xcassets */; };
 		049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */; };
+		6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */; };
+		6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */; };
 		60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B8B0C82495075500C2D4AE /* CardViewController.xib */; };
 		60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8B0CA24950B3800C2D4AE /* CardViewController.swift */; };
 		CC04B384A839053D0E11CB8B /* Pods_HackatonCCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */; };
@@ -29,6 +31,8 @@
 		049E2DE1249420D300CD7705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.release.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.release.xcconfig"; sourceTree = "<group>"; };
+		6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundElementsTableViewCell.swift; sourceTree = "<group>"; };
+		6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoundElementsTableViewCell.xib; sourceTree = "<group>"; };
 		60B8B0C82495075500C2D4AE /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		60B8B0CA24950B3800C2D4AE /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				60B8B0CA24950B3800C2D4AE /* CardViewController.swift */,
 				60B8B0C82495075500C2D4AE /* CardViewController.xib */,
+				6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */,
+				6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */,
 			);
 			path = CardView;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 			files = (
 				60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */,
 				049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */,
+				6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */,
 				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
 				049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */,
 			);
@@ -227,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */,
 				60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */,
 				049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */,
 				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
