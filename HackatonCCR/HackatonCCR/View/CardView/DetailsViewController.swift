@@ -7,27 +7,15 @@
 //
 
 import UIKit
+import SwiftUI
 
 class DetailsViewController: UIViewController {
-    
-    var cardViewController: CardViewController!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var percentOfLikeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func dismiss(_ sender: UIButton) {
-        if let controller = cardViewController{
-            controller.showTableView()
-        }
-    }
-    
     func setView(place: Place){
-        nameLabel.text = place.name
-        percentOfLikeLabel.text = place.percentOfLike
     }
     /*
     // MARK: - Navigation
@@ -39,4 +27,13 @@ class DetailsViewController: UIViewController {
     }
     */
 
+}
+struct Images {
+    var body: some View{
+        List{
+            Image("bad")
+            Image("bad")
+            Image("bad")
+        }
+    }
 }
