@@ -1,8 +1,20 @@
 import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+admin.initializeApp(functions.config().firebase)
+
+
+export const getPlacePercentageReviews = functions.https.onRequest((request, response) => {
+    
+    admin.firestore().collection("places").doc('7NqVMTiCd3mHKvm3QCQE').get()
+    .then(snapshot => {
+        const data = snapshot.data
+        console.log(data)
+        response.send(data)
+    })
+    .catch(error => {
+        console.log(error)
+        response.status(500).send(error)
+    })
+
+});
