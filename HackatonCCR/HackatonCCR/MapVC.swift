@@ -70,28 +70,6 @@ class MapVC: UIViewController {
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
     }
-    
-    func getCurrentLocation() {
-        // Pedindo autorizacao para sempre utilizar a localizacao, incluindo em background
-        self.locationManager.requestAlwaysAuthorization();
-        self.locationManager.requestWhenInUseAuthorization();
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self;
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-            locationManager.startUpdatingLocation();
-        }
-    }
-    
-    func addMarkerToMap(latitude: CLLocationDegrees, longitude: CLLocationDegrees, markerText: String) {
-        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
-        marker.title = markerText
-        marker.icon = UIImage(named: "MarkerIcon")
-        marker.setIconSize(scaledToSize: CGSize(width: markerSize, height: markerSize * 1.25))
-        marker.map = mapView
-        
-        currentMarkers.append(marker)
-    }
 }
 
 // MARK: - Integrando a search bar a tela
@@ -102,18 +80,7 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
         searchController?.isActive = false
         if place.formattedAddress != nil {
             
-            var urlFormattedAddres = place.formattedAddress!.replacingOccurrences(of: " ", with: "%20")
-            
-            // FIXME: - Fazer esse tratamento numa extension
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ã", with: "a")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "á", with: "a")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "à", with: "a")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "é", with: "e")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ê", with: "e")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ó", with: "o")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "õ", with: "o")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ô", with: "o")
-            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "í", with: "i")
+            var urlFormattedAddres = formatAddressToURL(rawAddress: place.formattedAddress!)
             self.geocodeQueryService.getGeocodeByAddress(address: urlFormattedAddres, completion: { (geocode, error) in
                 if error == nil{
                     self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
@@ -123,6 +90,7 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
                     self.routesQueryService.getRouteByCoordinates(originLat: self.userLatitude, originLnt: self.userLongitude, destinationLat: self.destinationLatitude!, destinationLtn: self.destinationLongitude!, completion: { (route, error) in
                         if error == nil {
                             self.drawRouteOnMap(APIroute: route!)
+                            self.getRoutePointsCoordinates(APIroute: route!)
                         }
                         else
                         {
@@ -139,19 +107,6 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
                     print("Erro na query do geocode: ", error)
                 }
             })
-        }
-    }
-    
-    func drawRouteOnMap(APIroute: DirectionRoute) {
-        for route in APIroute.routes {
-            let routeOverviewPolyline = route.overviewPolyline
-            let points = routeOverviewPolyline?.points ?? ""
-            let path = GMSPath(fromEncodedPath: points)
-            let polyline = GMSPolyline(path: path)
-            // propriedades da renderizacao da linha
-            polyline.strokeWidth = 4
-            polyline.strokeColor = UIColor.blue
-            polyline.map = self.mapView
         }
     }
     

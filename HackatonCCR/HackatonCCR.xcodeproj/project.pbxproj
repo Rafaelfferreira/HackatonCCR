@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0424F37A2496765C0093D56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0424F3792496765B0093D56E /* GoogleService-Info.plist */; };
 		0436594D24943250002BA1AB /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436594C24943250002BA1AB /* MapVC.swift */; };
+		043F92BF24968BA3005FBC43 /* MapVC+MapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F92BE24968BA3005FBC43 /* MapVC+MapFunctions.swift */; };
 		049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C40332495E6B9003BB445 /* RoutesQueryService.swift */; };
 		049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD3249420CE00CD7705 /* AppDelegate.swift */; };
 		049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD5249420CE00CD7705 /* SceneDelegate.swift */; };
@@ -22,7 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0424F3792496765B0093D56E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0436594C24943250002BA1AB /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		043F92BE24968BA3005FBC43 /* MapVC+MapFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+MapFunctions.swift"; sourceTree = "<group>"; };
 		049C40332495E6B9003BB445 /* RoutesQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesQueryService.swift; sourceTree = "<group>"; };
 		049E2DD0249420CE00CD7705 /* HackatonCCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049E2DD3249420CE00CD7705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +95,9 @@
 				049E2DDC249420D300CD7705 /* Assets.xcassets */,
 				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
 				049E2DE1249420D300CD7705 /* Info.plist */,
+				0424F3792496765B0093D56E /* GoogleService-Info.plist */,
 				0436594C24943250002BA1AB /* MapVC.swift */,
+				043F92BE24968BA3005FBC43 /* MapVC+MapFunctions.swift */,
 			);
 			path = HackatonCCR;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 				049E2DCD249420CE00CD7705 /* Frameworks */,
 				049E2DCE249420CE00CD7705 /* Resources */,
 				0BDD4E8DC14737078EC9A473 /* [CP] Copy Pods Resources */,
+				56E0F955E6F92FDF0F5DE547 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B416CD24951976009185E1 /* Main.storyboard in Resources */,
+				0424F37A2496765C0093D56E /* GoogleService-Info.plist in Resources */,
 				049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */,
 				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
 			);
@@ -206,6 +214,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56E0F955E6F92FDF0F5DE547 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		582A427C650C2D6D4B824752 /* [CP] Check Pods Manifest.lock */ = {
@@ -239,6 +264,7 @@
 			files = (
 				04FDE1B724952E5300C508BF /* Geocode.swift in Sources */,
 				049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */,
+				043F92BF24968BA3005FBC43 /* MapVC+MapFunctions.swift in Sources */,
 				0436594D24943250002BA1AB /* MapVC.swift in Sources */,
 				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
 				04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */,

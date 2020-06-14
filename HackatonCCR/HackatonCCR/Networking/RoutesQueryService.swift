@@ -30,17 +30,11 @@ class RoutesQueryService {
                     if let data = data {
                         do {
                             // JSONSerialization to test the API response during debug
-                            let APIResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+//                            let APIResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
                             
                             do {
 //                                print(APIResponse)
                                 let queryReturn = try? JSONDecoder().decode(DirectionRoute.self, from: data)
-                                
-                                
-//                                let queryReturn = try JSONDecoder().decode(GeocodeQueryResult.self, from: data)
-//                                let formatedAddress = queryReturn.results?[0].formattedAddress
-//                                let latitude = queryReturn.results?[0].geometry?.location?.lat
-//                                let longitude = queryReturn.results?[0].geometry?.location?.lng
                                 completion(queryReturn, nil)
                             }  catch { return }
                         }
