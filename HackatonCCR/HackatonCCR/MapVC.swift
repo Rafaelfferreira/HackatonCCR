@@ -69,6 +69,11 @@ class MapVC: UIViewController {
         
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
+        
+        //FIXME: - Teste funcao geocode by coordinates
+        geocodeQueryService.getGeocodeByCoordinates(latitude: -29.685195, longitude: -51.1226633, completion: { (geocode, erro) in
+            print(geocode)
+        })
     }
 }
 

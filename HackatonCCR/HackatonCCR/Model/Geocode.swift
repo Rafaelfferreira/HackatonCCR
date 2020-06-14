@@ -17,6 +17,7 @@ struct Geocode {
 
 enum GeocodeEndpoints: String {
     case getGeocodeByAddress = "https://maps.googleapis.com/maps/api/geocode/json?address="
+    case getGeocodeByCoordinates = "https://maps.googleapis.com/maps/api/geocode/json?latlng="
 }
 
 
