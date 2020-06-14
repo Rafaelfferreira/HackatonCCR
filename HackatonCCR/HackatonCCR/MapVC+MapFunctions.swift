@@ -74,4 +74,14 @@ extension MapVC {
         
         return urlFormattedAddres
     }
+    
+//    func showMarkersForRoute(originUF: String, destinationUF: String) {
+//        CollectAllStopsFromState(state: originUF) { (stops, error) in
+//            if error == nil {
+//                
+//            } else {
+//                print("Erro: \(eror)")
+//            }
+//        }
+//    }
 }

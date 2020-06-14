@@ -10,7 +10,6 @@
 		049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C40332495E6B9003BB445 /* RoutesQueryService.swift */; };
 		049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD5249420CE00CD7705 /* SceneDelegate.swift */; };
 		049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD7249420CE00CD7705 /* ViewController.swift */; };
-		049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDC249420D300CD7705 /* Assets.xcassets */; };
 		04B416CD24951976009185E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B416CC24951976009185E1 /* Main.storyboard */; };
 		04B8C7FA2496C0980099B275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B8C7F92496C0980099B275 /* Assets.xcassets */; };
 		04B8C7FF2496C1080099B275 /* DirectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C7FC2496C1080099B275 /* DirectionRoute.swift */; };
@@ -48,7 +47,6 @@
 		049E2DD0249420CE00CD7705 /* HackatonCCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049E2DD5249420CE00CD7705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		049E2DD7249420CE00CD7705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		049E2DDC249420D300CD7705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049E2DDF249420D300CD7705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B416CC24951976009185E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04B8C7F92496C0980099B275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,12 +196,11 @@
 				04B8C8022496C1390099B275 /* MapVC.swift */,
 				04B8C8032496C1390099B275 /* MapVC+DatabaseAccess.swift */,
 				04B8C8042496C13A0099B275 /* MapVC+MapFunctions.swift */,
+				04B8C8112496C4720099B275 /* MapVC+CardView.swift */,
 				049E2DD7249420CE00CD7705 /* ViewController.swift */,
-				049E2DDC249420D300CD7705 /* Assets.xcassets */,
 				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
 				04B8C8092496C3A50099B275 /* GoogleService-Info.plist */,
 				04B8C80A2496C3A50099B275 /* Info.plist */,
-				04B8C8112496C4720099B275 /* MapVC+CardView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -332,7 +329,6 @@
 				60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */,
 				603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */,
 				6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */,
-				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
 				04B8C7FA2496C0980099B275 /* Assets.xcassets in Resources */,
 				603672A12495760B003CF6DB /* DetailsViewController.xib in Resources */,
 			);

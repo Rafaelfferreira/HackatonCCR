@@ -66,7 +66,9 @@ class MapVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //FIXME: - Tirar isso daqui
-//        getStopsNearRoute()
+        CollectAllStopsFromState(state: "RS", completion: { (stops, error) in
+            print("olar")
+        })
         mapView.settings.compassButton = true;
         
         // Liberando localizacao do usuario
