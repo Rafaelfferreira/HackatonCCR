@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPlacesInformations()
+//        getPlacesInformations()
     }
     
     //popula tableView
