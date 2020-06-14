@@ -5,7 +5,13 @@ admin.initializeApp(functions.config().firebase)
 
 
 export const getPlacePercentageReviews = functions.https.onRequest((request, response) => {
-    
+
+    console.log(request.header)
+    response.send(request.header)
+
+    /*
+
+
     admin.firestore().collection("places").doc('7NqVMTiCd3mHKvm3QCQE').get()
     .then(snapshot => {
         const data = snapshot.data
@@ -15,6 +21,6 @@ export const getPlacePercentageReviews = functions.https.onRequest((request, res
     .catch(error => {
         console.log(error)
         response.status(500).send(error)
-    })
+    })*/
 
 });
