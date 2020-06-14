@@ -16,6 +16,7 @@ class CardViewController: UIViewController {
         placePercentLabel.isHidden = true
         placeBackButton.isHidden = true
         placeImageLike.isHidden = true
+        
         elementsFoundLabel.isHidden = false
         tableView.isHidden = false
     }
@@ -28,6 +29,7 @@ class CardViewController: UIViewController {
     
     //MARK: card view
     var detailsViewController : DetailsViewController!
+    var scroolViewController : ScroolViewController!
     var numOfElemenstsFound: Int = 2
     @IBOutlet weak var handleArea: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -41,8 +43,10 @@ class CardViewController: UIViewController {
     
     func setDetailsView(){
         conteinerView.isHidden = true
-        detailsViewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
-        conteinerView.addSubview(detailsViewController.view)
+//        detailsViewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+//        conteinerView.addSubview(detailsViewController.view)
+        scroolViewController = ScroolViewController(nibName: "ScroolViewController", bundle: nil)
+        conteinerView.addSubview(scroolViewController.view)
         placeNameLabel.isHidden = true
         placePercentLabel.isHidden = true
         placeBackButton.isHidden = true
@@ -73,6 +77,7 @@ extension  CardViewController : UITableViewDataSource, UITableViewDelegate {
         // set cell information
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
@@ -80,16 +85,19 @@ extension  CardViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as?
             FoundElementsTableViewCell {
-            detailsViewController.setView(place: cell.place)
+            scroolViewController.setView(place: cell.place)
+//            detailsViewController.setView(place: cell.place)
             placeNameLabel.text = cell.place.name
             placePercentLabel.text = cell.place.percentOfLike
             tableView.isHidden = true
+            elementsFoundLabel.isHidden = true
+            
             conteinerView.isHidden = false
             placeNameLabel.isHidden = false
             placePercentLabel.isHidden = false
             placeBackButton.isHidden = false
             placeImageLike.isHidden = false
-            elementsFoundLabel.isHidden = true
+            
         }
     }
 }
