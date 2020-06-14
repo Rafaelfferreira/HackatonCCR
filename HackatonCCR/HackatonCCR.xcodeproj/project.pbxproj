@@ -15,6 +15,7 @@
 		049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDC249420D300CD7705 /* Assets.xcassets */; };
 		049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */; };
 		04B416CD24951976009185E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B416CC24951976009185E1 /* Main.storyboard */; };
+		04D21E2F24965ECA0066C4D2 /* DirectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D21E2E24965ECA0066C4D2 /* DirectionRoute.swift */; };
 		04FDE1B724952E5300C508BF /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE1B624952E5300C508BF /* Geocode.swift */; };
 		04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE1D824956AE500C508BF /* GeocodeQueryService.swift */; };
 		54A59A658129CE932F6269D1 /* Pods_HackatonCCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05ED75FAA64049B57DD99AD0 /* Pods_HackatonCCR.framework */; };
@@ -31,6 +32,7 @@
 		049E2DDF249420D300CD7705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049E2DE1249420D300CD7705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B416CC24951976009185E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04D21E2E24965ECA0066C4D2 /* DirectionRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionRoute.swift; sourceTree = "<group>"; };
 		04FDE1B624952E5300C508BF /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
 		04FDE1D824956AE500C508BF /* GeocodeQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeQueryService.swift; sourceTree = "<group>"; };
 		05ED75FAA64049B57DD99AD0 /* Pods_HackatonCCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				04FDE1B624952E5300C508BF /* Geocode.swift */,
+				04D21E2E24965ECA0066C4D2 /* DirectionRoute.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				0436594D24943250002BA1AB /* MapVC.swift in Sources */,
 				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
 				04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */,
+				04D21E2F24965ECA0066C4D2 /* DirectionRoute.swift in Sources */,
 				049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */,
 				049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */,
 			);

@@ -14,13 +14,13 @@ import Foundation
 //&key=YOUR_API_KEY
 
 class RoutesQueryService {
-    func getRouteByCoordinates(originLat: Double, originLnt: Double, destinationLat: Double, destinationLtn: Double, completion: @escaping (Geocode?, Error?) -> Void){
+    func getRouteByCoordinates(originLat: Double, originLnt: Double, destinationLat: Double, destinationLtn: Double, completion: @escaping (DirectionRoute?, Error?) -> Void){
         let urlPath: String = "\(originLat),\(originLnt)&destination=\(destinationLat),\(destinationLtn)" + "&key=AIzaSyBW83BvH2RsLsrxlA7bXLsO4Q_YkynHnGk"
         let requestUrl: String = RoutesEndpoints.getRouteBetween2Points.rawValue + urlPath
             if let urlComponents = URLComponents(string: requestUrl) {
                 
                 guard let url = urlComponents.url else { return }
-                print(url)
+//                print(url)
                 URLSession.shared.dataTask(with: url) { data, response, error in
                     if error != nil {
                         print("ERRO")
@@ -33,26 +33,19 @@ class RoutesQueryService {
                             let APIResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
                             
                             do {
-                                print(APIResponse)
+//                                print(APIResponse)
+                                let queryReturn = try? JSONDecoder().decode(DirectionRoute.self, from: data)
+                                
                                 
 //                                let queryReturn = try JSONDecoder().decode(GeocodeQueryResult.self, from: data)
 //                                let formatedAddress = queryReturn.results?[0].formattedAddress
 //                                let latitude = queryReturn.results?[0].geometry?.location?.lat
 //                                let longitude = queryReturn.results?[0].geometry?.location?.lng
-//                                completion(Geocode(formattedAddress: formatedAddress, latitude: latitude, longitude: longitude), nil)
+                                completion(queryReturn, nil)
                             }  catch { return }
-                            
-                            
-                            
-                            
                         }
                     }
                 }.resume()
             }
         }
 }
-
-enum RoutesEndpoints: String {
-    case getRouteBetween2Points = "https://maps.googleapis.com/maps/api/directions/json?origin="
-}
-

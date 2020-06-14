@@ -69,10 +69,6 @@ class MapVC: UIViewController {
         
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
-        
-        //FIXME: - testando adicionar os markers, colocar em algum lugar que faca sentido depois
-        addMarkerToMap(latitude: (locationManager.location?.coordinate.latitude)! - 0.003, longitude: (locationManager.location?.coordinate.longitude)!, markerText: "Teste")
-        
     }
     
     func getCurrentLocation() {
@@ -117,21 +113,45 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
             urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ó", with: "o")
             urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "õ", with: "o")
             urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ô", with: "o")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "í", with: "i")
             self.geocodeQueryService.getGeocodeByAddress(address: urlFormattedAddres, completion: { (geocode, error) in
                 if error == nil{
                     self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
                     self.destinationLatitude = geocode!.latitude
                     self.destinationLongitude = geocode!.longitude
                     self.destinationUF = geocode!.UF
-//                    self.routesQueryService.getRouteByCoordinates(originLat: self.userLatitude, originLnt: self.userLongitude, destinationLat: self.destinationLatitude!, destinationLtn: self.destinationLongitude!, completion: { (geocode, error) in
-//                        print("eita nois")
-//                    })
+                    self.routesQueryService.getRouteByCoordinates(originLat: self.userLatitude, originLnt: self.userLongitude, destinationLat: self.destinationLatitude!, destinationLtn: self.destinationLongitude!, completion: { (route, error) in
+                        if error == nil {
+                            self.drawRouteOnMap(APIroute: route!)
+                        }
+                        else
+                        {
+                            print("erro na query da rota: ", error)
+                        }
+                    })
                     
                     // set the camera to the point of interest
                     let camera = GMSCameraPosition.camera(withLatitude: (geocode!.latitude)!, longitude: (geocode!.longitude)!, zoom: 15);
                     self.mapView.camera = camera;
                 }
+                else
+                {
+                    print("Erro na query do geocode: ", error)
+                }
             })
+        }
+    }
+    
+    func drawRouteOnMap(APIroute: DirectionRoute) {
+        for route in APIroute.routes {
+            let routeOverviewPolyline = route.overviewPolyline
+            let points = routeOverviewPolyline?.points ?? ""
+            let path = GMSPath(fromEncodedPath: points)
+            let polyline = GMSPolyline(path: path)
+            // propriedades da renderizacao da linha
+            polyline.strokeWidth = 4
+            polyline.strokeColor = UIColor.blue
+            polyline.map = self.mapView
         }
     }
     

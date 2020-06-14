@@ -18,7 +18,7 @@ var resultGeocode: Geocode? = nil
         if let urlComponents = URLComponents(string: requestUrl) {
             
             guard let url = urlComponents.url else { return }
-            print(url)
+//            print(url)
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if error != nil {
                     print("ERRO")
