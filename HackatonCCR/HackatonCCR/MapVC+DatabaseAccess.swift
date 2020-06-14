@@ -17,7 +17,8 @@ extension MapVC {
                 print("Error getting documents: \(error)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    print("acessou os documentos com sucesso")
+//                    print("\(document.documentID) => \(document.data())")
                 }
             }
         }
