@@ -17,6 +17,27 @@ class MapVC: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     
+    // var associated with the card
+    enum CardState {
+        case expanded
+        case collapsed
+    }
+    
+    var cardViewController: CardViewController!
+    var visualEffectView: UIVisualEffectView!
+    
+    var cardHeight: CGFloat = 405
+    var cardHandleAreaHeight: CGFloat = 106
+    
+    var cardVisible = false
+    
+    var nextState:CardState {
+        return cardVisible ? .collapsed : .expanded
+    }
+    
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted: CGFloat = 0
+    
     // var associated with locations
     let locationManager = CLLocationManager();
     var userLatitude: Double = 0.0
@@ -44,7 +65,8 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getStopsNearRoute()
+        //FIXME: - Tirar isso daqui
+//        getStopsNearRoute()
         mapView.settings.compassButton = true;
         
         // Liberando localizacao do usuario
@@ -72,6 +94,8 @@ class MapVC: UIViewController {
         
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
+        
+        getPlacesInformations()
     }
 }
 

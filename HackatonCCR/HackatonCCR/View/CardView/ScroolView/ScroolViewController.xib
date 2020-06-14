@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScroolViewController" customModule="HackatonCCR" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="yU6-ib-qs7" id="jz5-1d-P9x"/>
+                <outlet property="scrollView" destination="BYK-C1-z4E" id="uwW-Vv-0jc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Zx3-JJ-yzg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="682"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="BYK-C1-z4E">
+                    <rect key="frame" x="0.0" y="44" width="396" height="638"/>
+                    <subviews>
+                        <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yU6-ib-qs7">
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="638"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <viewLayoutGuide key="safeArea" id="rT2-zr-9KO"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="yU6-ib-qs7" firstAttribute="top" secondItem="BYK-C1-z4E" secondAttribute="top" id="72P-hm-H36"/>
+                        <constraint firstAttribute="bottom" secondItem="yU6-ib-qs7" secondAttribute="bottom" id="Qq7-Cs-Msf"/>
+                        <constraint firstAttribute="trailing" secondItem="yU6-ib-qs7" secondAttribute="trailing" id="Tk2-iU-BlX"/>
+                        <constraint firstItem="yU6-ib-qs7" firstAttribute="centerY" secondItem="BYK-C1-z4E" secondAttribute="centerY" id="l2N-Dg-nR4"/>
+                        <constraint firstItem="yU6-ib-qs7" firstAttribute="centerX" secondItem="BYK-C1-z4E" secondAttribute="centerX" id="mNg-6b-QAt"/>
+                        <constraint firstItem="yU6-ib-qs7" firstAttribute="centerY" secondItem="eev-IL-CyT" secondAttribute="centerY" id="t0N-W1-sek"/>
+                        <constraint firstItem="yU6-ib-qs7" firstAttribute="leading" secondItem="BYK-C1-z4E" secondAttribute="leading" id="yRR-95-E6W"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="cu0-iO-rQ2"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="eev-IL-CyT"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="BYK-C1-z4E" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="1ld-jl-Sxv"/>
+                <constraint firstItem="BYK-C1-z4E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FMq-Dl-XOJ"/>
+                <constraint firstItem="BYK-C1-z4E" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gZJ-vf-R2k"/>
+                <constraint firstItem="BYK-C1-z4E" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="lPH-mr-Rqs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="124.6376811594203" y="30.803571428571427"/>
+        </view>
+    </objects>
+</document>
