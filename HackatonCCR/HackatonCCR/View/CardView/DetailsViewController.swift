@@ -10,18 +10,25 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    var place: Place?
+    var cardViewController: CardViewController!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var percentOfLikeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func dismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if let controller = cardViewController{
+            controller.showTableView()
+        }
     }
     
+    func setView(place: Place){
+        nameLabel.text = place.name
+        percentOfLikeLabel.text = place.percentOfLike
+    }
     /*
     // MARK: - Navigation
 

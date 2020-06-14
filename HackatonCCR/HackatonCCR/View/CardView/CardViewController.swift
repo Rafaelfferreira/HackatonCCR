@@ -13,12 +13,20 @@ class CardViewController: UIViewController {
     @IBOutlet weak var handleArea: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var elementsFoundLabel: UILabel!
+    @IBOutlet weak var conteinerView: UIView!
     
+    var detailsViewController : DetailsViewController!
     var numOfElemenstsFound: Int = 2
+    
     override func viewDidLoad() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         setElementsLabel()
+        conteinerView.isHidden = true
+        
+        detailsViewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        detailsViewController.cardViewController = self
+        conteinerView.addSubview(detailsViewController.view)
     }
     
     func setElementsLabel(){
@@ -50,14 +58,16 @@ extension  CardViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsViewController = Bundle.main.loadNibNamed("DetailsViewController", owner: self, options: nil)
-            if let cell = tableView.cellForRow(at: indexPath) as? FoundElementsTableViewCell {
-                let viewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
-                viewController.place = cell.place
-                if let navigator = self.navigationController {
-                    navigator.pushViewController(viewController, animated: true)
-                }
-            }
+        if let cell = tableView.cellForRow(at: indexPath) as?
+            FoundElementsTableViewCell {
+            detailsViewController.setView(place: cell.place)
+            conteinerView.isHidden = false
+            tableView.isHidden = true
         }
+    }
+    func showTableView(){
+        conteinerView.isHidden = true
+        tableView.isHidden = false
+    }
     
 }

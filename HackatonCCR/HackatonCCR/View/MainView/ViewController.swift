@@ -51,7 +51,7 @@ extension ViewController{
             cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
             
             cardViewController.view.clipsToBounds = true
-            cardViewController.view.layer.cornerRadius = 15
+            cardViewController.view.layer.cornerRadius = 12
             
             let tapGestureReconizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleCardTap(recognizer:)))
             let panGestureReconizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.handleCardPan(recognizer:)))
