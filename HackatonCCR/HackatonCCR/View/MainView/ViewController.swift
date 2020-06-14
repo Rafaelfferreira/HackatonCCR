@@ -32,14 +32,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCard()
+        getPlacesInformations()
     }
     
     //popula tableView
     func getPlacesInformations(){
+        setupCard()
         // fazer algo em relação a busca de informações
-        cardViewController.numOfElemenstsFound = 0
-        cardViewController.listOfPlaces = []
+//        cardViewController.numOfElemenstsFound = 0
+//        cardViewController.listOfPlaces = []
         cardViewController.getValuesForTableView()
     }
 }
