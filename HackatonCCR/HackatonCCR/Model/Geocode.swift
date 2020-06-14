@@ -12,6 +12,7 @@ struct Geocode {
     let formattedAddress: String?
     let latitude: Double?
     let longitude: Double?
+    let UF: String?
 }
 
 enum GeocodeEndpoints: String {

@@ -16,7 +16,15 @@ class MapVC: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     
+    // var associated with locations
     let locationManager = CLLocationManager();
+    var userLatitude: Double = 0.0
+    var userLongitude: Double = 0.0
+    var destinationLatitude: Double?
+    var destinationLongitude: Double?
+    var destinationUF: String?
+    var rectangle = GMSPolyline()
+    
     
     // var associated with markers
     var currentMarkers: [GMSMarker] = [];
@@ -27,8 +35,9 @@ class MapVC: UIViewController {
     var searchController: UISearchController?
     var resultView: UITextView?
     
-    //FIXME: - Teste networking
+    // Networking
     let geocodeQueryService = GeocodeQueryService()
+    let routesQueryService = RoutesQueryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,17 +67,12 @@ class MapVC: UIViewController {
         let camera = GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!, zoom: 15);
         mapView.camera = camera;
         
+        userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
+        userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
+        
         //FIXME: - testando adicionar os markers, colocar em algum lugar que faca sentido depois
         addMarkerToMap(latitude: (locationManager.location?.coordinate.latitude)! - 0.003, longitude: (locationManager.location?.coordinate.longitude)!, markerText: "Teste")
         
-        //FIXME: - Testando o networking
-//        self.geocodeQueryService.getGeocodeByAddress(address: "Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811", completion: { (geocode, error) in
-//            if error == nil{
-//                self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
-//                let camera = GMSCameraPosition.camera(withLatitude: (geocode!.latitude)!, longitude: (geocode!.longitude)!, zoom: 15);
-//                self.mapView.camera = camera;
-//            }
-//        })
     }
     
     func getCurrentLocation() {
@@ -116,6 +120,14 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
             self.geocodeQueryService.getGeocodeByAddress(address: urlFormattedAddres, completion: { (geocode, error) in
                 if error == nil{
                     self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
+                    self.destinationLatitude = geocode!.latitude
+                    self.destinationLongitude = geocode!.longitude
+                    self.destinationUF = geocode!.UF
+//                    self.routesQueryService.getRouteByCoordinates(originLat: self.userLatitude, originLnt: self.userLongitude, destinationLat: self.destinationLatitude!, destinationLtn: self.destinationLongitude!, completion: { (geocode, error) in
+//                        print("eita nois")
+//                    })
+                    
+                    // set the camera to the point of interest
                     let camera = GMSCameraPosition.camera(withLatitude: (geocode!.latitude)!, longitude: (geocode!.longitude)!, zoom: 15);
                     self.mapView.camera = camera;
                 }

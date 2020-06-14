@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0436594D24943250002BA1AB /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436594C24943250002BA1AB /* MapVC.swift */; };
+		049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C40332495E6B9003BB445 /* RoutesQueryService.swift */; };
 		049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD3249420CE00CD7705 /* AppDelegate.swift */; };
 		049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD5249420CE00CD7705 /* SceneDelegate.swift */; };
 		049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD7249420CE00CD7705 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0436594C24943250002BA1AB /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		049C40332495E6B9003BB445 /* RoutesQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesQueryService.swift; sourceTree = "<group>"; };
 		049E2DD0249420CE00CD7705 /* HackatonCCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049E2DD3249420CE00CD7705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049E2DD5249420CE00CD7705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				04FDE1D824956AE500C508BF /* GeocodeQueryService.swift */,
+				049C40332495E6B9003BB445 /* RoutesQueryService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
 				04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */,
 				049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */,
+				049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

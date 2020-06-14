@@ -18,7 +18,7 @@ var resultGeocode: Geocode? = nil
         if let urlComponents = URLComponents(string: requestUrl) {
             
             guard let url = urlComponents.url else { return }
-//            print(url)
+            print(url)
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if error != nil {
                     print("ERRO")
@@ -27,6 +27,7 @@ var resultGeocode: Geocode? = nil
                 
                 if let data = data {
                     do {
+                        // JSONSerialization to test the API response during debug
                         let APIResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
                         
                         do {
@@ -34,7 +35,18 @@ var resultGeocode: Geocode? = nil
                             let formatedAddress = queryReturn.results?[0].formattedAddress
                             let latitude = queryReturn.results?[0].geometry?.location?.lat
                             let longitude = queryReturn.results?[0].geometry?.location?.lng
-                            completion(Geocode(formattedAddress: formatedAddress, latitude: latitude, longitude: longitude), nil)
+                            var UF = ""
+                            
+                            let addressComponents = queryReturn.results?[0].addressComponents
+                            
+                            for item in addressComponents! {
+                                if(item.types?[0] == "administrative_area_level_1") {
+                                    UF = item.shortName!
+                                }
+                            }
+                            
+                            
+                            completion(Geocode(formattedAddress: formatedAddress, latitude: latitude, longitude: longitude, UF: UF), nil)
                         }  catch { return }
                         
                         
