@@ -46,7 +46,7 @@ class InitialViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "main" {
-            if let destination  = segue.destination as? ViewController{
+            if let destination  = segue.destination as? MapVC{
 //                set something
                 print("ok")
             }
