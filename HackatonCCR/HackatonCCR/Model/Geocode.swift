@@ -20,34 +20,34 @@ enum GeocodeEndpoints: String {
 
 
 // MARK: - API Return
-struct GeocodeAPIReturn: Codable {
-    let results: [Result]
-    let status: String
+struct GeocodeQueryResult: Codable {
+    let status: String?
+    let results: [Result]?
 }
 
 // MARK: - Result
 struct Result: Codable {
-    let addressComponents: [AddressComponent]
-    let formattedAddress: String
-    let geometry: Geometry
-    let placeID: String
-    let plusCode: PlusCode
-    let types: [String]
+    let addressComponents: [AddressComponent]?
+    let formattedAddress: String?
+    let geometry: Geometry?
+    let partialMatch: Bool?
+    let placeID: String?
+    let types: [String]?
 
     enum CodingKeys: String, CodingKey {
         case addressComponents = "address_components"
         case formattedAddress = "formatted_address"
         case geometry
+        case partialMatch = "partial_match"
         case placeID = "place_id"
-        case plusCode = "plus_code"
         case types
     }
 }
 
 // MARK: - AddressComponent
 struct AddressComponent: Codable {
-    let longName, shortName: String
-    let types: [String]
+    let longName, shortName: String?
+    let types: [String]?
 
     enum CodingKeys: String, CodingKey {
         case longName = "long_name"
@@ -58,30 +58,31 @@ struct AddressComponent: Codable {
 
 // MARK: - Geometry
 struct Geometry: Codable {
-    let location: Location
-    let locationType: String
-    let viewport: Viewport
+    let bounds: Bounds?
+    let location: Location?
+    let locationType: String?
+    let viewport: Bounds?
 
     enum CodingKeys: String, CodingKey {
-        case location
+        case bounds, location
         case locationType = "location_type"
         case viewport
     }
 }
 
-// MARK: - Location
-struct Location: Codable {
-    let lat, lng: Double
+// MARK: - Bounds
+struct Bounds: Codable {
+    let northeast, southwest: Location?
 }
 
-// MARK: - Viewport
-struct Viewport: Codable {
-    let northeast, southwest: Location
+// MARK: - Location
+struct Location: Codable {
+    let lat, lng: Double?
 }
 
 // MARK: - PlusCode
 struct PlusCode: Codable {
-    let compoundCode, globalCode: String
+    let compoundCode, globalCode: String?
 
     enum CodingKeys: String, CodingKey {
         case compoundCode = "compound_code"

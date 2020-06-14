@@ -30,11 +30,6 @@ class MapVC: UIViewController {
     //FIXME: - Teste networking
     let geocodeQueryService = GeocodeQueryService()
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationItem.backBarButtonItem?.title = "Test"
-        print("passou por aqui")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,10 +62,13 @@ class MapVC: UIViewController {
         addMarkerToMap(latitude: (locationManager.location?.coordinate.latitude)! - 0.003, longitude: (locationManager.location?.coordinate.longitude)!, markerText: "Teste")
         
         //FIXME: - Testando o networking
-        geocodeQueryService.getGeocodeByAddress(address: "24%20Sussex%20Drive%20Ottawa%20ON", completion: { (geocode, error) in
-            print("E ai")
-
-        })
+//        self.geocodeQueryService.getGeocodeByAddress(address: "Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811Av%20Paulista%201811", completion: { (geocode, error) in
+//            if error == nil{
+//                self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
+//                let camera = GMSCameraPosition.camera(withLatitude: (geocode!.latitude)!, longitude: (geocode!.longitude)!, zoom: 15);
+//                self.mapView.camera = camera;
+//            }
+//        })
     }
     
     func getCurrentLocation() {
@@ -102,10 +100,27 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
-        //FIXME: - Fazer algo com isso depois inferno
-        print("Place name: \(String(describing: place.name))")
-        print("Place address: \(String(describing: place.formattedAddress))")
-        print("Place attributions: \(String(describing: place.attributions))")
+        if place.formattedAddress != nil {
+            
+            var urlFormattedAddres = place.formattedAddress!.replacingOccurrences(of: " ", with: "%20")
+            
+            // FIXME: - Fazer esse tratamento numa extension
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ã", with: "a")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "á", with: "a")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "à", with: "a")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "é", with: "e")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ê", with: "e")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ó", with: "o")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "õ", with: "o")
+            urlFormattedAddres = urlFormattedAddres.replacingOccurrences(of: "ô", with: "o")
+            self.geocodeQueryService.getGeocodeByAddress(address: urlFormattedAddres, completion: { (geocode, error) in
+                if error == nil{
+                    self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
+                    let camera = GMSCameraPosition.camera(withLatitude: (geocode!.latitude)!, longitude: (geocode!.longitude)!, zoom: 15);
+                    self.mapView.camera = camera;
+                }
+            })
+        }
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didFailAutocompleteWithError error: Error) {
