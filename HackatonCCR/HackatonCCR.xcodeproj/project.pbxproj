@@ -3,16 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD3249420CE00CD7705 /* AppDelegate.swift */; };
+		049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C40332495E6B9003BB445 /* RoutesQueryService.swift */; };
 		049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD5249420CE00CD7705 /* SceneDelegate.swift */; };
 		049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD7249420CE00CD7705 /* ViewController.swift */; };
-		049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DD9249420CE00CD7705 /* Main.storyboard */; };
 		049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDC249420D300CD7705 /* Assets.xcassets */; };
-		049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */; };
+		04B416CD24951976009185E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B416CC24951976009185E1 /* Main.storyboard */; };
+		04B8C7FA2496C0980099B275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B8C7F92496C0980099B275 /* Assets.xcassets */; };
+		04B8C7FF2496C1080099B275 /* DirectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C7FC2496C1080099B275 /* DirectionRoute.swift */; };
+		04B8C8002496C1080099B275 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C7FD2496C1080099B275 /* Stop.swift */; };
+		04B8C8012496C1080099B275 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C7FE2496C1080099B275 /* Geocode.swift */; };
+		04B8C8052496C13A0099B275 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C8022496C1390099B275 /* MapVC.swift */; };
+		04B8C8062496C13A0099B275 /* MapVC+DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C8032496C1390099B275 /* MapVC+DatabaseAccess.swift */; };
+		04B8C8072496C13A0099B275 /* MapVC+MapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C8042496C13A0099B275 /* MapVC+MapFunctions.swift */; };
+		04B8C8082496C2170099B275 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C7F92496C0980099B275 /* Assets.xcassets */; };
+		04B8C80B2496C3A50099B275 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B8C8092496C3A50099B275 /* GoogleService-Info.plist */; };
+		04B8C80C2496C3A50099B275 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B8C80A2496C3A50099B275 /* Info.plist */; };
+		04B8C80D2496C3AF0099B275 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C8092496C3A50099B275 /* GoogleService-Info.plist */; };
+		04B8C80E2496C3AF0099B275 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C80A2496C3A50099B275 /* Info.plist */; };
+		04B8C8102496C41E0099B275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C80F2496C41E0099B275 /* AppDelegate.swift */; };
+		04B8C8122496C4720099B275 /* MapVC+CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8C8112496C4720099B275 /* MapVC+CardView.swift */; };
+		04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDE1D824956AE500C508BF /* GeocodeQueryService.swift */; };
 		6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */; };
 		6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */; };
 		603672A02495760B003CF6DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729E2495760B003CF6DB /* DetailsViewController.swift */; };
@@ -27,20 +41,33 @@
 		603672BE2496CC1F003CF6DB /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603672BD2496B03B003CF6DB /* Initial.storyboard */; };
 		60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B8B0C82495075500C2D4AE /* CardViewController.xib */; };
 		60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8B0CA24950B3800C2D4AE /* CardViewController.swift */; };
-		CC04B384A839053D0E11CB8B /* Pods_HackatonCCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */; };
+		7C8259A99D768246F5B7ED5C /* Pods_HackatonCCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7873CC364C018C58206FA2FA /* Pods_HackatonCCR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043F92C02496A378005FBC43 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		049C40332495E6B9003BB445 /* RoutesQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesQueryService.swift; sourceTree = "<group>"; };
 		049E2DD0249420CE00CD7705 /* HackatonCCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		049E2DD3249420CE00CD7705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049E2DD5249420CE00CD7705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		049E2DD7249420CE00CD7705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		049E2DDA249420CE00CD7705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		049E2DDC249420D300CD7705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049E2DDF249420D300CD7705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		049E2DE1249420D300CD7705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.release.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.release.xcconfig"; sourceTree = "<group>"; };
+		04B416CC24951976009185E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04B8C7F92496C0980099B275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04B8C7FC2496C1080099B275 /* DirectionRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionRoute.swift; sourceTree = "<group>"; };
+		04B8C7FD2496C1080099B275 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		04B8C7FE2496C1080099B275 /* Geocode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
+		04B8C8022496C1390099B275 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = HackatonCCR/MapVC.swift; sourceTree = SOURCE_ROOT; };
+		04B8C8032496C1390099B275 /* MapVC+DatabaseAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MapVC+DatabaseAccess.swift"; path = "HackatonCCR/MapVC+DatabaseAccess.swift"; sourceTree = SOURCE_ROOT; };
+		04B8C8042496C13A0099B275 /* MapVC+MapFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MapVC+MapFunctions.swift"; path = "HackatonCCR/MapVC+MapFunctions.swift"; sourceTree = SOURCE_ROOT; };
+		04B8C8092496C3A50099B275 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "HackatonCCR/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		04B8C80A2496C3A50099B275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = HackatonCCR/Info.plist; sourceTree = SOURCE_ROOT; };
+		04B8C80F2496C41E0099B275 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04B8C8112496C4720099B275 /* MapVC+CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+CardView.swift"; sourceTree = "<group>"; };
+		04D21E2E24965ECA0066C4D2 /* DirectionRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionRoute.swift; sourceTree = "<group>"; };
+		04FDE1B624952E5300C508BF /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
+		04FDE1D824956AE500C508BF /* GeocodeQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeQueryService.swift; sourceTree = "<group>"; };
+		55D78D7850936F69E6662E6C /* Pods-HackatonCCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.debug.xcconfig"; sourceTree = "<group>"; };
 		6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundElementsTableViewCell.swift; sourceTree = "<group>"; };
 		6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoundElementsTableViewCell.xib; sourceTree = "<group>"; };
 		6036729E2495760B003CF6DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +82,8 @@
 		603672BD2496B03B003CF6DB /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Initial.storyboard; path = /Users/ada/Desktop/HackatonCCR/HackatonCCR/HackatonCCR/View/InitialView/Initial.storyboard; sourceTree = "<absolute>"; };
 		60B8B0C82495075500C2D4AE /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		60B8B0CA24950B3800C2D4AE /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.debug.xcconfig"; sourceTree = "<group>"; };
+		7873CC364C018C58206FA2FA /* Pods_HackatonCCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16F7679F2F6AA5698161B1C /* Pods-HackatonCCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.release.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC04B384A839053D0E11CB8B /* Pods_HackatonCCR.framework in Frameworks */,
+				7C8259A99D768246F5B7ED5C /* Pods_HackatonCCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,8 +101,8 @@
 		016016D61571D1511AD981D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */,
-				47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */,
+				55D78D7850936F69E6662E6C /* Pods-HackatonCCR.debug.xcconfig */,
+				F16F7679F2F6AA5698161B1C /* Pods-HackatonCCR.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -85,7 +113,8 @@
 				049E2DD2249420CE00CD7705 /* HackatonCCR */,
 				049E2DD1249420CE00CD7705 /* Products */,
 				016016D61571D1511AD981D1 /* Pods */,
-				AB7736831F5B1B3A5ED58ACA /* Frameworks */,
+				04B8C7F82496BFF30099B275 /* Recovered References */,
+				30FF7AF151A03BAEC06D5F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +129,40 @@
 		049E2DD2249420CE00CD7705 /* HackatonCCR */ = {
 			isa = PBXGroup;
 			children = (
+				04FDE1BC2495406000C508BF /* Networking */,
+				04B416CC24951976009185E1 /* Main.storyboard */,
 				603672A2249581D6003CF6DB /* Model */,
-				049E2DE1249420D300CD7705 /* Info.plist */,
 				6036729224956216003CF6DB /* Suport */,
 				60367290249561CA003CF6DB /* View */,
 			);
 			path = HackatonCCR;
+			sourceTree = "<group>";
+		};
+		04B8C7F82496BFF30099B275 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				04FDE1B624952E5300C508BF /* Geocode.swift */,
+				04D21E2E24965ECA0066C4D2 /* DirectionRoute.swift */,
+				043F92C02496A378005FBC43 /* Stop.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		04FDE1BC2495406000C508BF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04FDE1D824956AE500C508BF /* GeocodeQueryService.swift */,
+				049C40332495E6B9003BB445 /* RoutesQueryService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		30FF7AF151A03BAEC06D5F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7873CC364C018C58206FA2FA /* Pods_HackatonCCR.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		60367290249561CA003CF6DB /* View */ = {
@@ -121,10 +178,9 @@
 		6036729224956216003CF6DB /* Suport */ = {
 			isa = PBXGroup;
 			children = (
-				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
-				049E2DD3249420CE00CD7705 /* AppDelegate.swift */,
+				04B8C7F92496C0980099B275 /* Assets.xcassets */,
 				049E2DD5249420CE00CD7705 /* SceneDelegate.swift */,
-				049E2DDC249420D300CD7705 /* Assets.xcassets */,
+				04B8C80F2496C41E0099B275 /* AppDelegate.swift */,
 			);
 			path = Suport;
 			sourceTree = "<group>";
@@ -144,8 +200,15 @@
 		603672942495625C003CF6DB /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				04B8C8022496C1390099B275 /* MapVC.swift */,
+				04B8C8032496C1390099B275 /* MapVC+DatabaseAccess.swift */,
+				04B8C8042496C13A0099B275 /* MapVC+MapFunctions.swift */,
 				049E2DD7249420CE00CD7705 /* ViewController.swift */,
-				049E2DD9249420CE00CD7705 /* Main.storyboard */,
+				049E2DDC249420D300CD7705 /* Assets.xcassets */,
+				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
+				04B8C8092496C3A50099B275 /* GoogleService-Info.plist */,
+				04B8C80A2496C3A50099B275 /* Info.plist */,
+				04B8C8112496C4720099B275 /* MapVC+CardView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -153,6 +216,9 @@
 		603672A2249581D6003CF6DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04B8C7FC2496C1080099B275 /* DirectionRoute.swift */,
+				04B8C7FE2496C1080099B275 /* Geocode.swift */,
+				04B8C7FD2496C1080099B275 /* Stop.swift */,
 				603672A3249581FA003CF6DB /* Place.swift */,
 				603672B72496A61B003CF6DB /* InfoTypes.swift */,
 			);
@@ -213,14 +279,6 @@
 			path = InitialView;
 			sourceTree = "<group>";
 		};
-		AB7736831F5B1B3A5ED58ACA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,10 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049E2DE4249420D300CD7705 /* Build configuration list for PBXNativeTarget "HackatonCCR" */;
 			buildPhases = (
-				494B339C40AEA23734862F55 /* [CP] Check Pods Manifest.lock */,
+				4A1399B389D8BBE8718F8B46 /* [CP] Check Pods Manifest.lock */,
 				049E2DCC249420CE00CD7705 /* Sources */,
 				049E2DCD249420CE00CD7705 /* Frameworks */,
 				049E2DCE249420CE00CD7705 /* Resources */,
+				F32D130558634792709AB462 /* [CP] Embed Pods Frameworks */,
+				B5D31369FA335994F8C7C1EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,13 +340,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B416CD24951976009185E1 /* Main.storyboard in Resources */,
+				04B8C80B2496C3A50099B275 /* GoogleService-Info.plist in Resources */,
+				04B8C80C2496C3A50099B275 /* Info.plist in Resources */,
 				60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */,
 				603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */,
-				049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */,
 				603672BE2496CC1F003CF6DB /* Initial.storyboard in Resources */,
 				6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */,
 				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
-				049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */,
+				04B8C7FA2496C0980099B275 /* Assets.xcassets in Resources */,
 				603672A12495760B003CF6DB /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +356,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		494B339C40AEA23734862F55 /* [CP] Check Pods Manifest.lock */ = {
+		4A1399B389D8BBE8718F8B46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,6 +378,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B5D31369FA335994F8C7C1EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32D130558634792709AB462 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -323,16 +419,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B8C8102496C41E0099B275 /* AppDelegate.swift in Sources */,
+				04B8C80D2496C3AF0099B275 /* GoogleService-Info.plist in Sources */,
+				04B8C80E2496C3AF0099B275 /* Info.plist in Sources */,
+				04B8C8082496C2170099B275 /* Assets.xcassets in Sources */,
+				04B8C8012496C1080099B275 /* Geocode.swift in Sources */,
+				04B8C7FF2496C1080099B275 /* DirectionRoute.swift in Sources */,
 				603672AA24965A0B003CF6DB /* InfoImageView.swift in Sources */,
 				6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */,
 				603672AC24965F51003CF6DB /* ImageWithText.swift in Sources */,
 				603672BC2496AFF6003CF6DB /* InitialViewController.swift in Sources */,
 				60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */,
+				04B8C8052496C13A0099B275 /* MapVC.swift in Sources */,
 				049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */,
 				603672AF2496785A003CF6DB /* ScroolViewControler.swift in Sources */,
-				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
+				04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */,
 				049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */,
+				04B8C8002496C1080099B275 /* Stop.swift in Sources */,
+				049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */,
 				603672A4249581FB003CF6DB /* Place.swift in Sources */,
+				04B8C8122496C4720099B275 /* MapVC+CardView.swift in Sources */,
+				04B8C8072496C13A0099B275 /* MapVC+MapFunctions.swift in Sources */,
+				04B8C8062496C13A0099B275 /* MapVC+DatabaseAccess.swift in Sources */,
 				603672B82496A61B003CF6DB /* InfoTypes.swift in Sources */,
 				603672A02495760B003CF6DB /* DetailsViewController.swift in Sources */,
 			);
@@ -341,14 +449,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		049E2DD9249420CE00CD7705 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				049E2DDA249420CE00CD7705 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -476,7 +576,7 @@
 		};
 		049E2DE5249420D300CD7705 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */;
+			baseConfigurationReference = 55D78D7850936F69E6662E6C /* Pods-HackatonCCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -498,7 +598,7 @@
 		};
 		049E2DE6249420D300CD7705 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */;
+			baseConfigurationReference = F16F7679F2F6AA5698161B1C /* Pods-HackatonCCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
