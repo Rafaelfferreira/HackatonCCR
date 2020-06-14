@@ -13,6 +13,18 @@
 		049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DD9249420CE00CD7705 /* Main.storyboard */; };
 		049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDC249420D300CD7705 /* Assets.xcassets */; };
 		049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */; };
+		6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */; };
+		6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */; };
+		603672A02495760B003CF6DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729E2495760B003CF6DB /* DetailsViewController.swift */; };
+		603672A12495760B003CF6DB /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036729F2495760B003CF6DB /* DetailsViewController.xib */; };
+		603672A4249581FB003CF6DB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672A3249581FA003CF6DB /* Place.swift */; };
+		603672AA24965A0B003CF6DB /* InfoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672A924965A0B003CF6DB /* InfoImageView.swift */; };
+		603672AC24965F51003CF6DB /* ImageWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672AB24965F51003CF6DB /* ImageWithText.swift */; };
+		603672AF2496785A003CF6DB /* ScroolViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672AE2496785A003CF6DB /* ScroolViewControler.swift */; };
+		603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603672B0249688E8003CF6DB /* ScroolViewController.xib */; };
+		603672B82496A61B003CF6DB /* InfoTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672B72496A61B003CF6DB /* InfoTypes.swift */; };
+		60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B8B0C82495075500C2D4AE /* CardViewController.xib */; };
+		60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8B0CA24950B3800C2D4AE /* CardViewController.swift */; };
 		CC04B384A839053D0E11CB8B /* Pods_HackatonCCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +39,18 @@
 		049E2DE1249420D300CD7705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackatonCCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.release.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.release.xcconfig"; sourceTree = "<group>"; };
+		6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundElementsTableViewCell.swift; sourceTree = "<group>"; };
+		6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoundElementsTableViewCell.xib; sourceTree = "<group>"; };
+		6036729E2495760B003CF6DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		6036729F2495760B003CF6DB /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		603672A3249581FA003CF6DB /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		603672A924965A0B003CF6DB /* InfoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoImageView.swift; sourceTree = "<group>"; };
+		603672AB24965F51003CF6DB /* ImageWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithText.swift; sourceTree = "<group>"; };
+		603672AE2496785A003CF6DB /* ScroolViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroolViewControler.swift; sourceTree = "<group>"; };
+		603672B0249688E8003CF6DB /* ScroolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScroolViewController.xib; sourceTree = "<group>"; };
+		603672B72496A61B003CF6DB /* InfoTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTypes.swift; sourceTree = "<group>"; };
+		60B8B0C82495075500C2D4AE /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		60B8B0CA24950B3800C2D4AE /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +72,6 @@
 				94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */,
 				47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +96,107 @@
 		049E2DD2249420CE00CD7705 /* HackatonCCR */ = {
 			isa = PBXGroup;
 			children = (
-				049E2DD3249420CE00CD7705 /* AppDelegate.swift */,
-				049E2DD5249420CE00CD7705 /* SceneDelegate.swift */,
-				049E2DD7249420CE00CD7705 /* ViewController.swift */,
-				049E2DD9249420CE00CD7705 /* Main.storyboard */,
-				049E2DDC249420D300CD7705 /* Assets.xcassets */,
-				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
+				603672A2249581D6003CF6DB /* Model */,
 				049E2DE1249420D300CD7705 /* Info.plist */,
+				6036729224956216003CF6DB /* Suport */,
+				60367290249561CA003CF6DB /* View */,
 			);
 			path = HackatonCCR;
+			sourceTree = "<group>";
+		};
+		60367290249561CA003CF6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				603672942495625C003CF6DB /* MainView */,
+				603672932495624B003CF6DB /* CardView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6036729224956216003CF6DB /* Suport */ = {
+			isa = PBXGroup;
+			children = (
+				049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */,
+				049E2DD3249420CE00CD7705 /* AppDelegate.swift */,
+				049E2DD5249420CE00CD7705 /* SceneDelegate.swift */,
+				049E2DDC249420D300CD7705 /* Assets.xcassets */,
+			);
+			path = Suport;
+			sourceTree = "<group>";
+		};
+		603672932495624B003CF6DB /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				603672B524969D34003CF6DB /* CardView */,
+				603672B624969D42003CF6DB /* SwiftUI_InfoView */,
+				603672B424969D12003CF6DB /* TableView */,
+				603672B324969CF8003CF6DB /* DetailsView */,
+				603672B224969CE6003CF6DB /* ScroolView */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		603672942495625C003CF6DB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				049E2DD7249420CE00CD7705 /* ViewController.swift */,
+				049E2DD9249420CE00CD7705 /* Main.storyboard */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		603672A2249581D6003CF6DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				603672A3249581FA003CF6DB /* Place.swift */,
+				603672B72496A61B003CF6DB /* InfoTypes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		603672B224969CE6003CF6DB /* ScroolView */ = {
+			isa = PBXGroup;
+			children = (
+				603672AE2496785A003CF6DB /* ScroolViewControler.swift */,
+				603672B0249688E8003CF6DB /* ScroolViewController.xib */,
+			);
+			path = ScroolView;
+			sourceTree = "<group>";
+		};
+		603672B324969CF8003CF6DB /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				6036729E2495760B003CF6DB /* DetailsViewController.swift */,
+				6036729F2495760B003CF6DB /* DetailsViewController.xib */,
+			);
+			path = DetailsView;
+			sourceTree = "<group>";
+		};
+		603672B424969D12003CF6DB /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */,
+				6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		603672B524969D34003CF6DB /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				60B8B0CA24950B3800C2D4AE /* CardViewController.swift */,
+				60B8B0C82495075500C2D4AE /* CardViewController.xib */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		603672B624969D42003CF6DB /* SwiftUI_InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				603672A924965A0B003CF6DB /* InfoImageView.swift */,
+				603672AB24965F51003CF6DB /* ImageWithText.swift */,
+			);
+			path = SwiftUI_InfoView;
 			sourceTree = "<group>";
 		};
 		AB7736831F5B1B3A5ED58ACA /* Frameworks */ = {
@@ -103,7 +218,6 @@
 				049E2DCC249420CE00CD7705 /* Sources */,
 				049E2DCD249420CE00CD7705 /* Frameworks */,
 				049E2DCE249420CE00CD7705 /* Resources */,
-				D9E40F065E62D9C2BD588A19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */,
+				603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */,
 				049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */,
+				6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */,
 				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
 				049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */,
+				603672A12495760B003CF6DB /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,23 +301,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D9E40F065E62D9C2BD588A19 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,9 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603672AA24965A0B003CF6DB /* InfoImageView.swift in Sources */,
+				6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */,
+				603672AC24965F51003CF6DB /* ImageWithText.swift in Sources */,
+				60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */,
 				049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */,
+				603672AF2496785A003CF6DB /* ScroolViewControler.swift in Sources */,
 				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
 				049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */,
+				603672A4249581FB003CF6DB /* Place.swift in Sources */,
+				603672B82496A61B003CF6DB /* InfoTypes.swift in Sources */,
+				603672A02495760B003CF6DB /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -354,15 +463,18 @@
 			baseConfigurationReference = 94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M36T693Y9P;
 				INFOPLIST_FILE = HackatonCCR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rff.HackatonCCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,15 +485,18 @@
 			baseConfigurationReference = 47CD8099C553E19CF1E82F95 /* Pods-HackatonCCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M36T693Y9P;
 				INFOPLIST_FILE = HackatonCCR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rff.HackatonCCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
