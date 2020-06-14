@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uGf-OY-Nrz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HOMEVIEW-->
+        <scene sceneID="GQ9-YZ-tmN">
+            <objects>
+                <viewController title="HOMEVIEW" id="JYm-7c-mav" customClass="InitialViewController" customModule="HackatonCCR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hmu-n0-Bgn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vym-hf-I9g">
+                                <rect key="frame" x="25" y="108" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="6CA-ps-Vdv"/>
+                                    <constraint firstAttribute="height" constant="25" id="Ltc-fr-0AW"/>
+                                </constraints>
+                                <state key="normal" image="config"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Para onde você vai?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auS-VY-JhI">
+                                <rect key="frame" x="25" y="148" width="364" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="BpK-Xl-BFe"/>
+                                </constraints>
+                                <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-7c-Ec5">
+                                <rect key="frame" x="25" y="554" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="bRg-oD-AeT"/>
+                                    <constraint firstAttribute="height" constant="150" id="sVg-Kp-zUv"/>
+                                </constraints>
+                                <state key="normal" title="Calcular Frete">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="costOfFreight:" destination="JYm-7c-mav" eventType="touchUpInside" id="8r0-xU-8QY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-wT-sNf">
+                                <rect key="frame" x="25" y="724" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0fo-Qi-enI"/>
+                                    <constraint firstAttribute="width" constant="150" id="dwb-XW-CHH"/>
+                                </constraints>
+                                <state key="normal" title="Adicionar Local">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewPlace:" destination="JYm-7c-mav" eventType="touchUpInside" id="fgt-Zo-LzG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-2a-GeE">
+                                <rect key="frame" x="25" y="384" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="M2G-TM-exl"/>
+                                    <constraint firstAttribute="width" constant="150" id="OU2-fq-UQP"/>
+                                </constraints>
+                                <state key="normal" title="Oficina">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findMechanical:" destination="JYm-7c-mav" eventType="touchUpInside" id="vKZ-UN-g0c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-3S-IVK">
+                                <rect key="frame" x="25" y="214" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Zez-U4-dpq"/>
+                                    <constraint firstAttribute="width" constant="150" id="gfb-C7-c6v"/>
+                                </constraints>
+                                <state key="normal" title="Posto de Gasolina">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findGasStation:" destination="JYm-7c-mav" eventType="touchUpInside" id="FKg-XZ-wZH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-RQ-g3I">
+                                <rect key="frame" x="239" y="214" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="D1m-MF-5dd"/>
+                                    <constraint firstAttribute="height" constant="150" id="ZOp-vR-3on"/>
+                                </constraints>
+                                <state key="normal" title="Restaurante">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findRestaurant:" destination="JYm-7c-mav" eventType="touchUpInside" id="ApU-Mz-Onu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vty-VC-okZ">
+                                <rect key="frame" x="239" y="384" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EDr-YB-ow2"/>
+                                    <constraint firstAttribute="height" constant="150" id="Jod-C5-njj"/>
+                                </constraints>
+                                <state key="normal" title="Área de Lazer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findRecreationArea:" destination="JYm-7c-mav" eventType="touchUpInside" id="wkk-Q9-UC0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-Bd-hhI">
+                                <rect key="frame" x="239" y="554" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2WD-cq-qqo"/>
+                                    <constraint firstAttribute="height" constant="150" id="lS9-NI-e4o"/>
+                                </constraints>
+                                <state key="normal" title="Facilidades">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="CCRPage:" destination="JYm-7c-mav" eventType="touchUpInside" id="vJw-6w-jK2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2MR-6g-cgz" firstAttribute="trailing" secondItem="ugO-RQ-g3I" secondAttribute="trailing" constant="25" id="65L-K0-OwW"/>
+                            <constraint firstItem="d7K-3S-IVK" firstAttribute="top" secondItem="auS-VY-JhI" secondAttribute="bottom" constant="20" id="Goe-Hs-gEf"/>
+                            <constraint firstItem="2MR-6g-cgz" firstAttribute="trailing" secondItem="BEv-Bd-hhI" secondAttribute="trailing" constant="25" id="KX4-tu-NzX"/>
+                            <constraint firstItem="j6Z-7c-Ec5" firstAttribute="leading" secondItem="2MR-6g-cgz" secondAttribute="leading" constant="25" id="LEe-wT-Gm5"/>
+                            <constraint firstItem="rnj-2a-GeE" firstAttribute="leading" secondItem="2MR-6g-cgz" secondAttribute="leading" constant="25" id="Lgg-Hl-x26"/>
+                            <constraint firstItem="auS-VY-JhI" firstAttribute="top" secondItem="2MR-6g-cgz" secondAttribute="top" constant="60" id="NZu-nI-5ja"/>
+                            <constraint firstItem="vty-VC-okZ" firstAttribute="top" secondItem="ugO-RQ-g3I" secondAttribute="bottom" constant="20" id="XFh-Ed-FdA"/>
+                            <constraint firstItem="vym-hf-I9g" firstAttribute="leading" secondItem="2MR-6g-cgz" secondAttribute="leading" constant="25" id="XZH-yC-TFB"/>
+                            <constraint firstItem="rnj-2a-GeE" firstAttribute="top" secondItem="d7K-3S-IVK" secondAttribute="bottom" constant="20" id="Y0g-Aj-gKs"/>
+                            <constraint firstItem="2MR-6g-cgz" firstAttribute="trailing" secondItem="auS-VY-JhI" secondAttribute="trailing" constant="25" id="ceS-mR-Hrw"/>
+                            <constraint firstItem="BEv-Bd-hhI" firstAttribute="top" secondItem="vty-VC-okZ" secondAttribute="bottom" constant="20" id="dTe-rf-H7h"/>
+                            <constraint firstItem="auS-VY-JhI" firstAttribute="leading" secondItem="2MR-6g-cgz" secondAttribute="leading" constant="25" id="dvW-vI-9ot"/>
+                            <constraint firstItem="2MR-6g-cgz" firstAttribute="trailing" secondItem="vty-VC-okZ" secondAttribute="trailing" constant="25" id="ez1-Lz-ya6"/>
+                            <constraint firstItem="qfZ-wT-sNf" firstAttribute="leading" secondItem="2MR-6g-cgz" secondAttribute="leading" constant="25" id="kQB-uA-9sA"/>
+                            <constraint firstItem="d7K-3S-IVK" firstAttribute="leading" secondItem="2MR-6g-cgz" secondAttribute="leading" constant="25" id="kmE-jO-pNV"/>
+                            <constraint firstItem="vym-hf-I9g" firstAttribute="top" secondItem="2MR-6g-cgz" secondAttribute="top" constant="20" id="nQP-QQ-Pq7"/>
+                            <constraint firstItem="j6Z-7c-Ec5" firstAttribute="top" secondItem="rnj-2a-GeE" secondAttribute="bottom" constant="20" id="ngR-U7-gHb"/>
+                            <constraint firstItem="qfZ-wT-sNf" firstAttribute="top" secondItem="j6Z-7c-Ec5" secondAttribute="bottom" constant="20" id="uUj-iU-M1N"/>
+                            <constraint firstItem="ugO-RQ-g3I" firstAttribute="top" secondItem="auS-VY-JhI" secondAttribute="bottom" constant="20" id="vFK-l6-ran"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2MR-6g-cgz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="g0n-0p-XJF"/>
+                    <connections>
+                        <segue destination="4Qh-BK-Y8U" kind="show" identifier="main" id="pc8-u1-uV1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gw-hS-GCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="-400"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="67h-yl-wPq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggN-Cc-pry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder id="4Qh-BK-Y8U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="A5T-qD-4AJ"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="298" y="-455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Idu-iY-Dcf">
+            <objects>
+                <navigationController id="uGf-OY-Nrz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gnY-UL-jFT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JYm-7c-mav" kind="relationship" relationship="rootViewController" id="xc9-mP-mPr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnj-Pa-mWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1180" y="-400"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="config" width="24" height="24"/>
+    </resources>
+</document>

@@ -23,6 +23,8 @@
 		603672AF2496785A003CF6DB /* ScroolViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672AE2496785A003CF6DB /* ScroolViewControler.swift */; };
 		603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603672B0249688E8003CF6DB /* ScroolViewController.xib */; };
 		603672B82496A61B003CF6DB /* InfoTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672B72496A61B003CF6DB /* InfoTypes.swift */; };
+		603672BC2496AFF6003CF6DB /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603672BB2496AFF6003CF6DB /* InitialViewController.swift */; };
+		603672BE2496CC1F003CF6DB /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603672BD2496B03B003CF6DB /* Initial.storyboard */; };
 		60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B8B0C82495075500C2D4AE /* CardViewController.xib */; };
 		60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8B0CA24950B3800C2D4AE /* CardViewController.swift */; };
 		CC04B384A839053D0E11CB8B /* Pods_HackatonCCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267875C78C8A40BB9C870535 /* Pods_HackatonCCR.framework */; };
@@ -49,6 +51,8 @@
 		603672AE2496785A003CF6DB /* ScroolViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroolViewControler.swift; sourceTree = "<group>"; };
 		603672B0249688E8003CF6DB /* ScroolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScroolViewController.xib; sourceTree = "<group>"; };
 		603672B72496A61B003CF6DB /* InfoTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTypes.swift; sourceTree = "<group>"; };
+		603672BB2496AFF6003CF6DB /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		603672BD2496B03B003CF6DB /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Initial.storyboard; path = /Users/ada/Desktop/HackatonCCR/HackatonCCR/HackatonCCR/View/InitialView/Initial.storyboard; sourceTree = "<absolute>"; };
 		60B8B0C82495075500C2D4AE /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		60B8B0CA24950B3800C2D4AE /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		94429FDC8E03A1D1AB624A9C /* Pods-HackatonCCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackatonCCR.debug.xcconfig"; path = "Target Support Files/Pods-HackatonCCR/Pods-HackatonCCR.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		60367290249561CA003CF6DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				603672B92496AFC1003CF6DB /* InitialView */,
 				603672942495625C003CF6DB /* MainView */,
 				603672932495624B003CF6DB /* CardView */,
 			);
@@ -199,6 +204,15 @@
 			path = SwiftUI_InfoView;
 			sourceTree = "<group>";
 		};
+		603672B92496AFC1003CF6DB /* InitialView */ = {
+			isa = PBXGroup;
+			children = (
+				603672BD2496B03B003CF6DB /* Initial.storyboard */,
+				603672BB2496AFF6003CF6DB /* InitialViewController.swift */,
+			);
+			path = InitialView;
+			sourceTree = "<group>";
+		};
 		AB7736831F5B1B3A5ED58ACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +283,7 @@
 				60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */,
 				603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */,
 				049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */,
+				603672BE2496CC1F003CF6DB /* Initial.storyboard in Resources */,
 				6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */,
 				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
 				049E2DDB249420CE00CD7705 /* Main.storyboard in Resources */,
@@ -311,6 +326,7 @@
 				603672AA24965A0B003CF6DB /* InfoImageView.swift in Sources */,
 				6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */,
 				603672AC24965F51003CF6DB /* ImageWithText.swift in Sources */,
+				603672BC2496AFF6003CF6DB /* InitialViewController.swift in Sources */,
 				60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */,
 				049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */,
 				603672AF2496785A003CF6DB /* ScroolViewControler.swift in Sources */,
