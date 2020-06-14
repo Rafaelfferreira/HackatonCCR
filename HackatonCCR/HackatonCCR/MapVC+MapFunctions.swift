@@ -36,15 +36,7 @@ extension MapVC {
             locationManager.startUpdatingLocation();
         }
     }
-    
-//    func getGeocodeFromCoordinates(latitude: Double, longitude: Double, completion: @escaping (Geocode?, Error?) -> Void){
-//        geocodeQueryService.getGeocodeByCoordinates(latitude: latitude, longitude: longitude, completion: { (geocode, error) in
-//            if error == nil {
-//                returnedGeocode = geocode
-//            }
-//        })
-//    }
-    
+      
     //FIXME: - Terminar de pegar os pontos da rota
     func getRoutePointsCoordinates(APIroute: DirectionRoute)
     {

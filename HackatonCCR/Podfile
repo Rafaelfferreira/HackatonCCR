@@ -14,6 +14,8 @@ target 'HackatonCCR' do
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'Firebase/Storage'
   pod 'Firebase/Functions'
-
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
 end

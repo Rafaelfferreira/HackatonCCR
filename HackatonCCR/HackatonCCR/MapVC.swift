@@ -11,6 +11,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 import GooglePlaces
+import Firebase
 
 class MapVC: UIViewController {
     
@@ -25,6 +26,8 @@ class MapVC: UIViewController {
     var destinationUF: String?
     var rectangle = GMSPolyline()
     
+    //database Access
+    let db = Firestore.firestore()
     
     // var associated with markers
     var currentMarkers: [GMSMarker] = [];
@@ -41,7 +44,7 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getStopsNearRoute()
         mapView.settings.compassButton = true;
         
         // Liberando localizacao do usuario
@@ -69,11 +72,6 @@ class MapVC: UIViewController {
         
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
-        
-        //FIXME: - Teste funcao geocode by coordinates
-        geocodeQueryService.getGeocodeByCoordinates(latitude: -29.685195, longitude: -51.1226633, completion: { (geocode, erro) in
-            print(geocode)
-        })
     }
 }
 

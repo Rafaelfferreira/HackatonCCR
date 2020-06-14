@@ -10,6 +10,8 @@
 		0424F37A2496765C0093D56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0424F3792496765B0093D56E /* GoogleService-Info.plist */; };
 		0436594D24943250002BA1AB /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436594C24943250002BA1AB /* MapVC.swift */; };
 		043F92BF24968BA3005FBC43 /* MapVC+MapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F92BE24968BA3005FBC43 /* MapVC+MapFunctions.swift */; };
+		043F92C12496A378005FBC43 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F92C02496A378005FBC43 /* Stop.swift */; };
+		043F92C32496A544005FBC43 /* MapVC+DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F92C22496A544005FBC43 /* MapVC+DatabaseAccess.swift */; };
 		049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C40332495E6B9003BB445 /* RoutesQueryService.swift */; };
 		049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD3249420CE00CD7705 /* AppDelegate.swift */; };
 		049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD5249420CE00CD7705 /* SceneDelegate.swift */; };
@@ -27,6 +29,8 @@
 		0424F3792496765B0093D56E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0436594C24943250002BA1AB /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		043F92BE24968BA3005FBC43 /* MapVC+MapFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+MapFunctions.swift"; sourceTree = "<group>"; };
+		043F92C02496A378005FBC43 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		043F92C22496A544005FBC43 /* MapVC+DatabaseAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+DatabaseAccess.swift"; sourceTree = "<group>"; };
 		049C40332495E6B9003BB445 /* RoutesQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesQueryService.swift; sourceTree = "<group>"; };
 		049E2DD0249420CE00CD7705 /* HackatonCCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackatonCCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049E2DD3249420CE00CD7705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				049E2DE1249420D300CD7705 /* Info.plist */,
 				0424F3792496765B0093D56E /* GoogleService-Info.plist */,
 				0436594C24943250002BA1AB /* MapVC.swift */,
+				043F92C22496A544005FBC43 /* MapVC+DatabaseAccess.swift */,
 				043F92BE24968BA3005FBC43 /* MapVC+MapFunctions.swift */,
 			);
 			path = HackatonCCR;
@@ -107,6 +112,7 @@
 			children = (
 				04FDE1B624952E5300C508BF /* Geocode.swift */,
 				04D21E2E24965ECA0066C4D2 /* DirectionRoute.swift */,
+				043F92C02496A378005FBC43 /* Stop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 				049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */,
 				04FDE1D924956AE500C508BF /* GeocodeQueryService.swift in Sources */,
 				04D21E2F24965ECA0066C4D2 /* DirectionRoute.swift in Sources */,
+				043F92C12496A378005FBC43 /* Stop.swift in Sources */,
 				049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */,
+				043F92C32496A544005FBC43 /* MapVC+DatabaseAccess.swift in Sources */,
 				049C40342495E6B9003BB445 /* RoutesQueryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
