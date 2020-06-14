@@ -1,0 +1,147 @@
+%PDF-1.7
+
+1 0 obj
+  << /Length 2 0 R
+     /FunctionType 4
+     /Domain [ 0.000000 1.000000 ]
+     /Range [ 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 ]
+  >>
+stream
+{  0.000000 exch 0.678431 exch 0.172549 exch dup 0.000000 gt { exch pop exch pop exch pop dup 0.000000 sub 0.094118 mul 0.000000 add exch dup 0.000000 sub 0.160784 mul 0.678431 add exch dup 0.000000 sub 0.109804 mul 0.172549 add exch } if dup 1.000000 gt { exch pop exch pop exch pop 0.094118 exch 0.839216 exch 0.282353 exch } if pop }
+endstream
+endobj
+
+2 0 obj
+  336
+endobj
+
+3 0 obj
+  << /Pattern << /P1 << /Matrix [ -0.000003 36.000000 -36.000000 -0.000003 73.333313 0.000003 ]
+                        /Shading << /Coords [ 0.000000 0.000000 1.000000 0.000000 ]
+                                    /Extend [ true true ]
+                                    /Domain [ 0.000000 1.000000 ]
+                                    /ShadingType 2
+                                    /ColorSpace /DeviceRGB
+                                    /Function 1 0 R
+                                 >>
+                        /PatternType 2
+                        /Type /Pattern
+                     >> >> >>
+endobj
+
+4 0 obj
+  << /Length 5 0 R >>
+stream
+/DeviceRGB CS
+/DeviceRGB cs
+q
+-1.000000 -0.000000 0.000000 -1.000000 37.333309 36.000000 cm
+/Pattern cs
+/P1 scn
+33.599998 36.000000 m
+31.733332 36.000000 l
+31.733332 11.368420 l
+33.599998 11.368420 l
+34.590141 11.368420 35.539726 11.767668 36.239864 12.478333 c
+36.939999 13.188997 37.333332 14.152863 37.333332 15.157894 c
+37.333332 32.210526 l
+37.333332 33.215557 36.939999 34.179424 36.239864 34.890091 c
+35.539726 35.600754 34.590141 36.000000 33.599998 36.000000 c
+h
+3.733333 11.368420 m
+16.799999 11.368420 l
+14.705600 4.986946 l
+14.518719 4.417416 14.467809 3.810970 14.557064 3.217556 c
+14.646319 2.624142 14.873184 2.060741 15.218975 1.573757 c
+15.564766 1.086773 16.019588 0.690140 16.545980 0.416531 c
+17.072371 0.142918 17.655268 0.000156 18.246664 0.000000 c
+18.666666 0.000000 l
+27.999998 10.303577 l
+27.999998 36.000000 l
+7.466666 36.000000 l
+0.117600 19.612421 l
+0.000000 19.057262 l
+0.000000 15.157894 l
+0.000000 14.152863 0.393332 13.188997 1.093468 12.478333 c
+1.793604 11.767668 2.743191 11.368420 3.733333 11.368420 c
+h
+f
+n
+Q
+
+endstream
+endobj
+
+5 0 obj
+  1047
+endobj
+
+6 0 obj
+  << /Annots []
+     /Type /Page
+     /MediaBox [ 0.000000 0.000000 37.333313 36.000000 ]
+     /Resources 3 0 R
+     /Contents 4 0 R
+     /Parent 7 0 R
+  >>
+endobj
+
+7 0 obj
+  << /Kids [ 6 0 R ]
+     /Count 1
+     /Type /Pages
+  >>
+endobj
+
+8 0 obj
+  << /Type /Catalog
+     /Pages 7 0 R
+  >>
+endobj
+
+xref
+0 9
+0000000000 65535 f
+0000000010 00000 n
+0000000530 00000 n
+0000000552 00000 n
+0000001178 00000 n
+0000002281 00000 n
+0000002304 00000 n
+0000002477 00000 n
+0000002551 00000 n
+trailer
+<< /ID [ (some) (id) ]
+   /Root 8 0 R
+   /Size 9
+>>
+startxref
+2610
+%%EOF6 0 obj
+<< /Annots [ ] /Type /Page /MediaBox [ 0 0 37.33331 36 ] /Resources 3 0 R
+/Parent 7 0 R /Rotate 180 /Contents 4 0 R >>
+endobj
+8 0 obj
+<< /Info 10 0 R /Pages 7 0 R /Type /Catalog >>
+endobj
+9 0 obj
+<< /Producer (macOS Version 10.15.4 \(Build 19E287\) Quartz PDFContext, AppendMode 1.1)
+/ModDate (D:20200614181454Z00'00') >>
+endobj
+10 0 obj
+9 0 R
+endobj
+xref
+0 1
+0000000000 65535 f 
+6 1
+0000002870 00000 n 
+8 3
+0000003004 00000 n 
+0000003066 00000 n 
+0000003207 00000 n 
+trailer
+<< /ID [<736F6D65><B9A73F2336979E521CD1D8E5D2A2030F> ] /Root 8 0 R /Size 11 /Prev 2610 >> 
+startxref
+3229
+%%EOF

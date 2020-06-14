@@ -16,4 +16,5 @@ struct Place {
     var phone: String
     var favorite: Bool
     var good_bad: Bool
+    var infoTypes: [InfosTypes]
 }
