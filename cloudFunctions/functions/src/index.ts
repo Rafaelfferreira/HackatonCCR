@@ -30,45 +30,62 @@ export const getPlacePercentageReviews = functions.https.onRequest((request, res
     let lat = request.query.lat
     let lng = request.query.lng
     let uf = request.query.uf
+    let qtd = request.query.qtd
 
     let lat_num = Number(lat)
     let lng_num = Number(lng)
     let uf_str = String(uf)
+    let qtd_num = Number(qtd)
 
-    var data = Array()
 
     admin.firestore().collection("placesOpt").doc(uf_str).collection(uf_str).get()
         .then(snapshot => {
-                data.push(
-                    snapshot.docs.map(doc => doc.data())
-                );
-        
-
-                async function getFirstClosest() {
-                    
-                    let closest = []
-
-                    for (const place of data.slice(5,)) {
-                        response.send(place)
-                        closest.push([place, distance(lat_num, lng_num, place.coordinates._latitude, place.coordinates._longitude, "k")])
-                    }
-                    return closest
+                
+                let data = snapshot.docs.map(doc => doc.data())
+                
+                if (qtd_num > data.length) {
+                    qtd_num = data.length - 1
                 }
 
-                const something = async () =>{
-
-                    let closest = await getFirstClosest
-                    return closest
+            try{
+                let closest = []
+                for (const place of data.slice(0,qtd_num)) {
+                    closest.push({
+                    "dist": distance(lat_num, lng_num, 
+                        place.coordinates._latitude,
+                        place.coordinates._longitude, "K"),
+                    "place": place
+                    })
                 }
+                
+                closest.sort((a, b) => a.dist < b.dist ? -1 : a.dist > b.dist ? 1 : 0)
+
+                for (const place of data.slice(qtd_num,)) {
+                    let curr_dist =  distance(lat_num, lng_num, place.coordinates._latitude,                            place.coordinates._longitude, "K")
+                  
+                    let control=true
+                    closest = closest.map(item => {
+                      if (item.dist > curr_dist && control){
+                        control = false
+                        return {"dist": curr_dist, "place": place}
+                      } else {
+                        return item
+                      }
+                    })
+                  }
+
+                let response_obj = []
+                for (const place of closest) {
+                    response_obj.push(place.place)
+                }
+
+                response.send(response_obj)
+
+
+            } catch(e) {
                 console.log('ooo')
-                console.log(something)
-                //response.send(data)
-
-        /*
-        for (const place of data.slice(5,)) {
-            console.log(place);
-        }
-        */
+                response.send('error')
+            }
 
         })
         .catch(error => {
@@ -77,37 +94,3 @@ export const getPlacePercentageReviews = functions.https.onRequest((request, res
         })
 })
     
-
-    
-/*
-    async () => {
-
-        const all_data = await promise()
-        let closest = distance(lat_num, lng_num, all_data[0].coordinates._latitude, all_data[0].coordinates._longitude, "K")
-        response.send(closest)
-        response.send(all_data)
-    }
-    
-
-   let placesRef = admin.firestore().collection("places")
-   placesRef.where('uf', '==', ufs_ls[0]).get()
-   .then(snapshot => {
-     if (snapshot.empty) {
-       console.log('Não foram encontrados pontos para este estado.');
-       response.send(ufs_ls[0])
-       return;
-     }
- 
-    console.log(snapshot.docs)
-    response.send(snapshot.docs);
-     /*
-     snapshot.forEach(doc => {
-       console.log(doc.id, '=>', doc.data());
-       response.send(doc.data());
-     });
-   })
-   .catch(err => {
-     console.log('Error getting documents', err);
-   });
-   */
-
