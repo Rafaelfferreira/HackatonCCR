@@ -9,7 +9,7 @@
 import UIKit
 
 class CardViewController: UIViewController {
-    //MARK: details view outlets
+    //MARK: scrool view outlets
     @IBAction func backFromDetails(_ sender: Any) {
         conteinerView.isHidden = true
         placeNameLabel.isHidden = true
@@ -26,25 +26,35 @@ class CardViewController: UIViewController {
     @IBOutlet weak var placeBackButton: UIButton!
     @IBOutlet weak var conteinerView: UIView!
     
-    
     //MARK: card view
     var detailsViewController : DetailsViewController!
     var scroolViewController : ScroolViewController!
-    var numOfElemenstsFound: Int = 2
+    var numOfElemenstsFound: Int = 0
+    var listOfPlaces: [Place] = []
+    
     @IBOutlet weak var handleArea: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var elementsFoundLabel: UILabel!
+    
+    //MARK: --------------------------
     override func viewDidLoad() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        setElementsLabel()
+        elementsFoundLabel.text = "Busque um local"
         setDetailsView()
+//        getValuesForTableView()
+    }
+    
+    func getValuesForTableView(){
+        //buscar informaçao sobre lugares
+        numOfElemenstsFound = 1
+        listOfPlaces = [Place(name: "posto da esquina", percentOfLike: "98% acharam bom", address: "Rod. dos Bandeirantes, Km 56 Chácara Malota, Jundiaí - SP, 13211-510", phone: "+55 (11) 45318612", favorite: false, good_bad: false, infoTypes: [.banheiro,.combustivel,.restaurante,.wifi,.adicionar,.whatsapp])]
+        tableView.reloadData()
+        setElementsLabel()
     }
     
     func setDetailsView(){
         conteinerView.isHidden = true
-//        detailsViewController = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
-//        conteinerView.addSubview(detailsViewController.view)
         scroolViewController = ScroolViewController(nibName: "ScroolViewController", bundle: nil)
         conteinerView.addSubview(scroolViewController.view)
         placeNameLabel.isHidden = true
@@ -72,9 +82,9 @@ extension  CardViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let place = listOfPlaces[indexPath.row]
         let cell = Bundle.main.loadNibNamed("FoundElementsTableViewCell", owner: self, options: nil)?.first as! FoundElementsTableViewCell
-        cell.place = Place(name: "dsdsndsndsds", percentOfLike: "98% acharam bom", address: "Rod. dos Bandeirantes, Km 56 Chácara Malota, Jundiaí - SP, 13211-510", phone: "+55 (11) 45318612", favorite: false, good_bad: false)
-        // set cell information
+        cell.setCellInformations(place: place)
         return cell
     }
     
@@ -86,7 +96,6 @@ extension  CardViewController : UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) as?
             FoundElementsTableViewCell {
             scroolViewController.setView(place: cell.place)
-//            detailsViewController.setView(place: cell.place)
             placeNameLabel.text = cell.place.name
             placePercentLabel.text = cell.place.percentOfLike
             tableView.isHidden = true

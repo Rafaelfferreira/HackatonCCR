@@ -32,6 +32,6 @@ class ScroolViewController: UIViewController {
     }
     
     func setView(place: Place){
-//         detailsViewController.setView(place: place)
+         detailsViewController.setView(place: place)
     }
 }

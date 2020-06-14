@@ -15,15 +15,11 @@ class FoundElementsTableViewCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     var place: Place!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    func setCellInformations(place: Place){
+        self.place = place
+        nameLabel.text = place.name
+        percentOfLikeLabel.text = place.percentOfLike
+        addressLabel.text = place.address
     }
-    
 }

@@ -34,6 +34,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupCard()
     }
+    
+    //popula tableView
+    func getPlacesInformations(){
+        // fazer algo em relação a busca de informações
+        cardViewController.numOfElemenstsFound = 0
+        cardViewController.listOfPlaces = []
+        cardViewController.getValuesForTableView()
+    }
 }
 
 //MARK: Card View setup and Animation

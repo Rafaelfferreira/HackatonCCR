@@ -127,8 +127,8 @@
 		603672932495624B003CF6DB /* CardView */ = {
 			isa = PBXGroup;
 			children = (
-				603672B624969D42003CF6DB /* SwiftUI_InfoView */,
 				603672B524969D34003CF6DB /* CardView */,
+				603672B624969D42003CF6DB /* SwiftUI_InfoView */,
 				603672B424969D12003CF6DB /* TableView */,
 				603672B324969CF8003CF6DB /* DetailsView */,
 				603672B224969CE6003CF6DB /* ScroolView */,
