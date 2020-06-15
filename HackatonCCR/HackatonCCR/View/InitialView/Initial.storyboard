@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uGf-OY-Nrz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uGf-OY-Nrz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--HOMEVIEW-->
         <scene sceneID="GQ9-YZ-tmN">
             <objects>
-                <viewController title="HOMEVIEW" id="JYm-7c-mav" customClass="InitialViewController" customModule="HackatonCCR" sceneMemberID="viewController">
+                <viewController title="HOMEVIEW" modalPresentationStyle="fullScreen" id="JYm-7c-mav" customClass="InitialViewController" customModule="HackatonCCR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hmu-n0-Bgn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2MR-6g-cgz" firstAttribute="trailing" secondItem="ugO-RQ-g3I" secondAttribute="trailing" constant="25" id="65L-K0-OwW"/>
                             <constraint firstItem="d7K-3S-IVK" firstAttribute="top" secondItem="auS-VY-JhI" secondAttribute="bottom" constant="20" id="Goe-Hs-gEf"/>
@@ -164,7 +164,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="g0n-0p-XJF"/>
                     <connections>
-                        <segue destination="4Qh-BK-Y8U" kind="presentation" identifier="main" id="eZ8-KV-OMF"/>
+                        <segue destination="4Qh-BK-Y8U" kind="show" identifier="main" id="eZ8-KV-OMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gw-hS-GCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

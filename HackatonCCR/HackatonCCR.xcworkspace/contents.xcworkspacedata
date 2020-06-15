@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/rafaelferreira/Documents/HackatonCCR/HackatonCCR/HackatonCCR/View/InitialView/Initial.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:HackatonCCR.xcodeproj">
    </FileRef>
    <FileRef
