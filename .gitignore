@@ -121,3 +121,7 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,cocoapods,swift,firebase
+
+
+# generated from cloud functions setup
+node_modules/
