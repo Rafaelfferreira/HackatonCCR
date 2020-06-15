@@ -7,16 +7,16 @@
      /Range [ 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 ]
   >>
 stream
-{  0.000000 exch 0.678431 exch 0.172549 exch dup 0.000000 gt { exch pop exch pop exch pop dup 0.000000 sub 0.094118 mul 0.000000 add exch dup 0.000000 sub 0.160784 mul 0.678431 add exch dup 0.000000 sub 0.109804 mul 0.172549 add exch } if dup 1.000000 gt { exch pop exch pop exch pop 0.094118 exch 0.839216 exch 0.282353 exch } if pop }
+{  0.094118 exch 0.839216 exch 0.282353 exch dup 0.000000 gt { exch pop exch pop exch pop dup 0.000000 sub -0.094118 mul 0.094118 add exch dup 0.000000 sub -0.160784 mul 0.839216 add exch dup 0.000000 sub -0.109804 mul 0.282353 add exch } if dup 1.000000 gt { exch pop exch pop exch pop 0.000000 exch 0.678431 exch 0.172549 exch } if pop }
 endstream
 endobj
 
 2 0 obj
-  336
+  339
 endobj
 
 3 0 obj
-  << /Pattern << /P1 << /Matrix [ -0.000003 36.000000 -36.000000 -0.000003 73.333313 0.000003 ]
+  << /Pattern << /P1 << /Matrix [ -0.000000 -36.000000 36.000000 -0.000000 -36.000000 36.000000 ]
                         /Shading << /Coords [ 0.000000 0.000000 1.000000 0.000000 ]
                                     /Extend [ true true ]
                                     /Domain [ 0.000000 1.000000 ]
@@ -35,7 +35,7 @@ stream
 /DeviceRGB CS
 /DeviceRGB cs
 q
--1.000000 -0.000000 0.000000 -1.000000 37.333309 36.000000 cm
+1.000000 -0.000000 0.000000 1.000000 -0.000000 0.000000 cm
 /Pattern cs
 /P1 scn
 33.599998 36.000000 m
@@ -73,7 +73,7 @@ endstream
 endobj
 
 5 0 obj
-  1047
+  1044
 endobj
 
 6 0 obj
@@ -103,45 +103,18 @@ xref
 0 9
 0000000000 65535 f
 0000000010 00000 n
-0000000530 00000 n
-0000000552 00000 n
-0000001178 00000 n
-0000002281 00000 n
-0000002304 00000 n
-0000002477 00000 n
-0000002551 00000 n
+0000000533 00000 n
+0000000555 00000 n
+0000001183 00000 n
+0000002283 00000 n
+0000002306 00000 n
+0000002479 00000 n
+0000002553 00000 n
 trailer
 << /ID [ (some) (id) ]
    /Root 8 0 R
    /Size 9
 >>
 startxref
-2610
-%%EOF6 0 obj
-<< /Annots [ ] /Type /Page /MediaBox [ 0 0 37.33331 36 ] /Resources 3 0 R
-/Parent 7 0 R /Rotate 180 /Contents 4 0 R >>
-endobj
-8 0 obj
-<< /Info 10 0 R /Pages 7 0 R /Type /Catalog >>
-endobj
-9 0 obj
-<< /Producer (macOS Version 10.15.4 \(Build 19E287\) Quartz PDFContext, AppendMode 1.1)
-/ModDate (D:20200614181454Z00'00') >>
-endobj
-10 0 obj
-9 0 R
-endobj
-xref
-0 1
-0000000000 65535 f 
-6 1
-0000002870 00000 n 
-8 3
-0000003004 00000 n 
-0000003066 00000 n 
-0000003207 00000 n 
-trailer
-<< /ID [<736F6D65><B9A73F2336979E521CD1D8E5D2A2030F> ] /Root 8 0 R /Size 11 /Prev 2610 >> 
-startxref
-3229
+2612
 %%EOF

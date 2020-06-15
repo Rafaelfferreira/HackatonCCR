@@ -15,8 +15,15 @@ class ViewController: UIViewController {
         case collapsed
     }
     
+    @IBAction func teste(_ sender: Any) {
+        if self.view.backgroundColor == #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1){
+            self.view.backgroundColor = .white
+        }else{
+            self.view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        }
+        
+    }
     var cardViewController: CardViewController!
-    var visualEffectView: UIVisualEffectView!
     
     var cardHeight: CGFloat = 405
     var cardHandleAreaHeight: CGFloat = 106
@@ -32,7 +39,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getPlacesInformations()
+        self.view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        getPlacesInformations()
     }
     
     //popula tableView
@@ -49,16 +57,11 @@ class ViewController: UIViewController {
 extension ViewController{
     
     func setupCard() {
-            visualEffectView = UIVisualEffectView()
-            visualEffectView.frame = self.view.frame
-            self.view.addSubview(visualEffectView)
-            
             cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
             self.addChild(cardViewController)
             self.view.addSubview(cardViewController.view)
             
-            cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
-            
+            cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight - 50, width: self.view.bounds.width, height: cardHeight)
             cardViewController.view.clipsToBounds = true
             cardViewController.view.layer.cornerRadius = 12
             
@@ -67,6 +70,7 @@ extension ViewController{
             
             cardViewController.handleArea.addGestureRecognizer(tapGestureReconizer)
             cardViewController.handleArea.addGestureRecognizer(panGestureReconizer)
+        
 
         }
         
@@ -115,20 +119,7 @@ extension ViewController{
         
             frameAnimator.startAnimation()
             runningAnimations.append(frameAnimator)
-                
-                
-            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-                switch state {
-                case .expanded:
-                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
-                case .collapsed:
-                    self.visualEffectView.effect = nil
-                }
-            }
-                
-            blurAnimator.startAnimation()
-            runningAnimations.append(blurAnimator)
-                
+
         }
     }
         

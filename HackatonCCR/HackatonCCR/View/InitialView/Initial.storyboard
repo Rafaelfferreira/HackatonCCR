@@ -32,14 +32,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-7c-Ec5">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-7c-Ec5">
                                 <rect key="frame" x="25" y="554" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="bRg-oD-AeT"/>
                                     <constraint firstAttribute="height" constant="150" id="sVg-Kp-zUv"/>
                                 </constraints>
-                                <state key="normal" title="Calcular Frete">
+                                <state key="normal" image="Bfrete">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -47,14 +47,14 @@
                                     <action selector="costOfFreight:" destination="JYm-7c-mav" eventType="touchUpInside" id="8r0-xU-8QY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-wT-sNf">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-wT-sNf">
                                 <rect key="frame" x="25" y="724" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="0fo-Qi-enI"/>
                                     <constraint firstAttribute="width" constant="150" id="dwb-XW-CHH"/>
                                 </constraints>
-                                <state key="normal" title="Adicionar Local">
+                                <state key="normal" image="Badicionar">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -62,14 +62,14 @@
                                     <action selector="addNewPlace:" destination="JYm-7c-mav" eventType="touchUpInside" id="fgt-Zo-LzG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-2a-GeE">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-2a-GeE">
                                 <rect key="frame" x="25" y="384" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="M2G-TM-exl"/>
                                     <constraint firstAttribute="width" constant="150" id="OU2-fq-UQP"/>
                                 </constraints>
-                                <state key="normal" title="Oficina">
+                                <state key="normal" image="Boficina">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -77,14 +77,14 @@
                                     <action selector="findMechanical:" destination="JYm-7c-mav" eventType="touchUpInside" id="vKZ-UN-g0c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-3S-IVK">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-3S-IVK">
                                 <rect key="frame" x="25" y="214" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Zez-U4-dpq"/>
                                     <constraint firstAttribute="width" constant="150" id="gfb-C7-c6v"/>
                                 </constraints>
-                                <state key="normal" title="Posto de Gasolina">
+                                <state key="normal" image="Bgasolina">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -92,14 +92,14 @@
                                     <action selector="findGasStation:" destination="JYm-7c-mav" eventType="touchUpInside" id="FKg-XZ-wZH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-RQ-g3I">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-RQ-g3I">
                                 <rect key="frame" x="239" y="214" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="D1m-MF-5dd"/>
                                     <constraint firstAttribute="height" constant="150" id="ZOp-vR-3on"/>
                                 </constraints>
-                                <state key="normal" title="Restaurante">
+                                <state key="normal" image="Brestaurante">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -107,14 +107,14 @@
                                     <action selector="findRestaurant:" destination="JYm-7c-mav" eventType="touchUpInside" id="ApU-Mz-Onu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vty-VC-okZ">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vty-VC-okZ">
                                 <rect key="frame" x="239" y="384" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="EDr-YB-ow2"/>
                                     <constraint firstAttribute="height" constant="150" id="Jod-C5-njj"/>
                                 </constraints>
-                                <state key="normal" title="Área de Lazer">
+                                <state key="normal" image="Blazer">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -122,14 +122,14 @@
                                     <action selector="findRecreationArea:" destination="JYm-7c-mav" eventType="touchUpInside" id="wkk-Q9-UC0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-Bd-hhI">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-Bd-hhI">
                                 <rect key="frame" x="239" y="554" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="2WD-cq-qqo"/>
                                     <constraint firstAttribute="height" constant="150" id="lS9-NI-e4o"/>
                                 </constraints>
-                                <state key="normal" title="Facilidades">
+                                <state key="normal" title="Facilidades" image="Bccr">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -164,20 +164,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="g0n-0p-XJF"/>
                     <connections>
-                        <segue destination="4Qh-BK-Y8U" kind="show" identifier="main" id="pc8-u1-uV1"/>
+                        <segue destination="4Qh-BK-Y8U" kind="presentation" identifier="main" id="eZ8-KV-OMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gw-hS-GCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-357" y="-400"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Main-->
         <scene sceneID="67h-yl-wPq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ggN-Cc-pry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder id="4Qh-BK-Y8U" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" id="4Qh-BK-Y8U" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="A5T-qD-4AJ"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggN-Cc-pry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="-455"/>
         </scene>
@@ -199,6 +199,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Badicionar" width="150" height="143"/>
+        <image name="Bccr" width="150" height="143"/>
+        <image name="Bfrete" width="150" height="143"/>
+        <image name="Bgasolina" width="150" height="143"/>
+        <image name="Blazer" width="150" height="143"/>
+        <image name="Boficina" width="150" height="143"/>
+        <image name="Brestaurante" width="150" height="143"/>
         <image name="config" width="24" height="24"/>
     </resources>
 </document>
