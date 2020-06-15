@@ -138,7 +138,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2MR-6g-cgz" firstAttribute="trailing" secondItem="ugO-RQ-g3I" secondAttribute="trailing" constant="25" id="65L-K0-OwW"/>
                             <constraint firstItem="d7K-3S-IVK" firstAttribute="top" secondItem="auS-VY-JhI" secondAttribute="bottom" constant="20" id="Goe-Hs-gEf"/>
@@ -164,6 +164,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="g0n-0p-XJF"/>
                     <connections>
+                        <outlet property="adicionarButton" destination="qfZ-wT-sNf" id="rtV-bk-3GX"/>
+                        <outlet property="ccrButton" destination="BEv-Bd-hhI" id="lhK-pS-1x8"/>
+                        <outlet property="freteButton" destination="j6Z-7c-Ec5" id="hae-QG-RHl"/>
+                        <outlet property="lazerButton" destination="vty-VC-okZ" id="yvP-cd-1GN"/>
+                        <outlet property="oficinaButton" destination="rnj-2a-GeE" id="kNZ-7N-AWS"/>
+                        <outlet property="postoButton" destination="d7K-3S-IVK" id="y2b-Ax-Sxp"/>
+                        <outlet property="restauranteButton" destination="ugO-RQ-g3I" id="rUV-fw-VhI"/>
                         <segue destination="4Qh-BK-Y8U" kind="presentation" identifier="main" id="eZ8-KV-OMF"/>
                     </connections>
                 </viewController>

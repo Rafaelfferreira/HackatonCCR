@@ -10,10 +10,42 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
+    @IBOutlet weak var postoButton: UIButton!
+    @IBOutlet weak var oficinaButton: UIButton!
+    @IBOutlet weak var restauranteButton: UIButton!
+    @IBOutlet weak var adicionarButton: UIButton!
+    @IBOutlet weak var ccrButton: UIButton!
+    @IBOutlet weak var freteButton: UIButton!
+    @IBOutlet weak var lazerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setCorner()
     }
+    
+    func setCorner(){
+        postoButton.clipsToBounds = true
+        postoButton.layer.cornerRadius = 15
+        
+        oficinaButton.clipsToBounds = true
+        oficinaButton.layer.cornerRadius = 15
+        
+        restauranteButton.clipsToBounds = true
+        restauranteButton.layer.cornerRadius = 15
+        
+        adicionarButton.clipsToBounds = true
+        adicionarButton.layer.cornerRadius = 15
+        
+        ccrButton.clipsToBounds = true
+        ccrButton.layer.cornerRadius = 15
+        
+        freteButton.clipsToBounds = true
+        freteButton.layer.cornerRadius = 15
+        
+        lazerButton.clipsToBounds = true
+        lazerButton.layer.cornerRadius = 15
+    }
+    
     @IBAction func findGasStation(_ sender: Any) {
         performSegue(withIdentifier: "main", sender: searchFor.gasStation)
     }
