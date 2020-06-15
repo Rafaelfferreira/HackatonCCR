@@ -97,7 +97,7 @@ class MapVC: UIViewController {
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
         
-        getPlacesInformations()
+//        getPlacesInformations()
     }
 }
 
@@ -119,7 +119,11 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
                     self.routesQueryService.getRouteByCoordinates(originLat: self.userLatitude, originLnt: self.userLongitude, destinationLat: self.destinationLatitude!, destinationLtn: self.destinationLongitude!, completion: { (route, error) in
                         if error == nil {
                             self.drawRouteOnMap(APIroute: route!)
-                            self.getRoutePointsCoordinates(APIroute: route!)
+//                            self.getRoutePointsCoordinates(APIroute: route!)
+                            self.addMarkerToMap(latitude: (point1.coordinates?.longitude)!, longitude: (point1.coordinates?.latitude)!, markerText: point1.name!)
+                            self.addMarkerToMap(latitude: (point2.coordinates?.longitude)!, longitude: (point2.coordinates?.latitude)!, markerText: point2.name!)
+                            
+                            
                         }
                         else
                         {
@@ -130,6 +134,9 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
                     // set the camera to the point of interest
                     let camera = GMSCameraPosition.camera(withLatitude: (geocode!.latitude)!, longitude: (geocode!.longitude)!, zoom: 15);
                     self.mapView.camera = camera;
+                    DispatchQueue.main.async {
+                        self.getPlacesInformations()
+                    }
                 }
                 else
                 {

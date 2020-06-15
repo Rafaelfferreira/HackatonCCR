@@ -47,8 +47,8 @@ class CardViewController: UIViewController {
     
     func getValuesForTableView(){
         //buscar informaçao sobre lugares
-        numOfElemenstsFound = 1
-        listOfPlaces = [Place(name: "posto da esquina", percentOfLike: "98% acharam bom", address: "Rod. dos Bandeirantes, Km 56 Chácara Malota, Jundiaí - SP, 13211-510", phone: "+55 (11) 45318612", favorite: false, good_bad: false, infoTypes: [.banheiro,.combustivel,.restaurante,.wifi,.adicionar,.whatsapp])]
+        numOfElemenstsFound = 2
+        listOfPlaces = [Place(name: point1.name!, percentOfLike: "93% acharam bom", address: point1.addr!, phone: point1.phone!, favorite: false, good_bad: false, infoTypes: [.banheiro,.combustivel,.restaurante,.wifi,.adicionar,.whatsapp]), Place(name: point2.name!, percentOfLike: "86% acharam bom", address: point2.addr!, phone: point2.phone!, favorite: false, good_bad: false, infoTypes: [.banheiro,.combustivel,.restaurante,.wifi,.adicionar,.whatsapp])]
         tableView.reloadData()
         setElementsLabel()
     }

@@ -10,7 +10,6 @@
 		04918E7C2497005600C84055 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04918E7B2497005600C84055 /* GoogleService-Info.plist */; };
 		04918E7D249700F100C84055 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D11BE42496FBD0008594B1 /* Initial.storyboard */; };
 		04918E812497029400C84055 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E7E2497029400C84055 /* Geocode.swift */; };
-		04918E822497029400C84055 /* DirectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E7F2497029400C84055 /* DirectionRoute.swift */; };
 		04918E832497029400C84055 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E802497029400C84055 /* Stop.swift */; };
 		04918E88249702AD00C84055 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E84249702AC00C84055 /* MapVC.swift */; };
 		04918E89249702AD00C84055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04918E85249702AC00C84055 /* Main.storyboard */; };
@@ -20,14 +19,11 @@
 		04918E912497030D00C84055 /* RoutesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E8F2497030D00C84055 /* RoutesQueryService.swift */; };
 		04918E922497030D00C84055 /* GeocodeQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E902497030D00C84055 /* GeocodeQueryService.swift */; };
 		04918E942497065D00C84055 /* StopsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E932497065D00C84055 /* StopsMock.swift */; };
-		04918E98249706F100C84055 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E95249706F000C84055 /* Geocode.swift */; };
-		04918E99249706F100C84055 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E96249706F100C84055 /* Stop.swift */; };
 		04918E9A249706F100C84055 /* DirectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04918E97249706F100C84055 /* DirectionRoute.swift */; };
 		049E2DD4249420CE00CD7705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD3249420CE00CD7705 /* AppDelegate.swift */; };
 		049E2DD6249420CE00CD7705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD5249420CE00CD7705 /* SceneDelegate.swift */; };
 		049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E2DD7249420CE00CD7705 /* ViewController.swift */; };
 		049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDC249420D300CD7705 /* Assets.xcassets */; };
-		049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E2DDE249420D300CD7705 /* LaunchScreen.storyboard */; };
 		6036729C24956442003CF6DB /* FoundElementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729A24956442003CF6DB /* FoundElementsTableViewCell.swift */; };
 		6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036729B24956442003CF6DB /* FoundElementsTableViewCell.xib */; };
 		603672A02495760B003CF6DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6036729E2495760B003CF6DB /* DetailsViewController.swift */; };
@@ -337,7 +333,6 @@
 				60B8B0C92495075500C2D4AE /* CardViewController.xib in Resources */,
 				04918E7C2497005600C84055 /* GoogleService-Info.plist in Resources */,
 				603672B1249688E8003CF6DB /* ScroolViewController.xib in Resources */,
-				049E2DE0249420D300CD7705 /* LaunchScreen.storyboard in Resources */,
 				6036729D24956442003CF6DB /* FoundElementsTableViewCell.xib in Resources */,
 				049E2DDD249420D300CD7705 /* Assets.xcassets in Resources */,
 				603672A12495760B003CF6DB /* DetailsViewController.xib in Resources */,
@@ -415,13 +410,10 @@
 				04918E832497029400C84055 /* Stop.swift in Sources */,
 				603672AC24965F51003CF6DB /* ImageWithText.swift in Sources */,
 				04918E912497030D00C84055 /* RoutesQueryService.swift in Sources */,
-				04918E98249706F100C84055 /* Geocode.swift in Sources */,
 				603672BC2496AFF6003CF6DB /* InitialViewController.swift in Sources */,
 				04918E8A249702AD00C84055 /* MapVC+MapFunctions.swift in Sources */,
 				04918E8D249702F200C84055 /* MapVC+CardView.swift in Sources */,
 				60B8B0CB24950B3800C2D4AE /* CardViewController.swift in Sources */,
-				04918E822497029400C84055 /* DirectionRoute.swift in Sources */,
-				04918E99249706F100C84055 /* Stop.swift in Sources */,
 				04918E812497029400C84055 /* Geocode.swift in Sources */,
 				04918E942497065D00C84055 /* StopsMock.swift in Sources */,
 				049E2DD8249420CE00CD7705 /* ViewController.swift in Sources */,
