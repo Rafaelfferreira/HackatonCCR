@@ -20,9 +20,9 @@ extension MapVC {
     }
     
     func setupCard() {
-            visualEffectView = UIVisualEffectView()
-            visualEffectView.frame = self.view.frame
-            self.view.addSubview(visualEffectView)
+//            visualEffectView = UIVisualEffectView()
+//            visualEffectView.frame = self.view.frame
+//            self.view.addSubview(visualEffectView)
             
             cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
             self.addChild(cardViewController)
@@ -88,17 +88,17 @@ extension MapVC {
             runningAnimations.append(frameAnimator)
                 
                 
-            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-                switch state {
-                case .expanded:
-                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
-                case .collapsed:
-                    self.visualEffectView.effect = nil
-                }
-            }
-                
-            blurAnimator.startAnimation()
-            runningAnimations.append(blurAnimator)
+////            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+////                switch state {
+////                case .expanded:
+////                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
+////                case .collapsed:
+////                    self.visualEffectView.effect = nil
+////                }
+////            }
+//                
+//            blurAnimator.startAnimation()
+//            runningAnimations.append(blurAnimator)
                 
         }
     }

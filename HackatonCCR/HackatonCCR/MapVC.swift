@@ -24,7 +24,7 @@ class MapVC: UIViewController {
     }
     
     var cardViewController: CardViewController!
-    var visualEffectView: UIVisualEffectView!
+//    var visualEffectView: UIVisualEffectView!
     
     var cardHeight: CGFloat = 405
     var cardHandleAreaHeight: CGFloat = 106
@@ -42,6 +42,7 @@ class MapVC: UIViewController {
     let locationManager = CLLocationManager();
     var userLatitude: Double = 0.0
     var userLongitude: Double = 0.0
+    var userUF: String = "AA"
     var destinationLatitude: Double?
     var destinationLongitude: Double?
     var destinationUF: String?
@@ -65,10 +66,6 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //FIXME: - Tirar isso daqui
-        CollectAllStopsFromState(state: "RS", completion: { (stops, error) in
-            print("olar")
-        })
         mapView.settings.compassButton = true;
         
         // Liberando localizacao do usuario
@@ -91,12 +88,20 @@ class MapVC: UIViewController {
         // Inicializando o aplicativo na posicao atual do usuario
         getCurrentLocation();
         // Setta o frame para comecar na posicao do usuario
-        let camera = GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!, zoom: 15);
+        var camera = GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!, zoom: 15);
         mapView.camera = camera;
         
         userLatitude = (locationManager.location?.coordinate.latitude ?? 0.0) as Double
         userLongitude = (locationManager.location?.coordinate.longitude ?? 0.0) as Double
+        geocodeQueryService.getGeocodeByCoordinates(latitude: userLatitude, longitude: userLongitude, completion: { (geocode, error) in
+            self.userUF = geocode?.UF as! String
+        })
         
+        camera = GMSCameraPosition.camera(withLatitude: Double(-51.172812), longitude: Double(-30.022105800000002), zoom: 15);
+//        mapView.camera = camera;
+        addMarkerToMap(latitude: Double(-51.172812), longitude: Double(-30.022105800000002), markerText: "PORRA", map: mapView)
+//        print("EAI")
+        // Ativa o card de infor
         getPlacesInformations()
     }
 }
@@ -112,14 +117,15 @@ extension MapVC: GMSAutocompleteResultsViewControllerDelegate {
             var urlFormattedAddres = formatAddressToURL(rawAddress: place.formattedAddress!)
             self.geocodeQueryService.getGeocodeByAddress(address: urlFormattedAddres, completion: { (geocode, error) in
                 if error == nil{
-                    self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado")
+                    self.addMarkerToMap(latitude: geocode!.latitude!, longitude: geocode!.longitude!, markerText: "Destino Selecionado", map: self.mapView)
                     self.destinationLatitude = geocode!.latitude
                     self.destinationLongitude = geocode!.longitude
                     self.destinationUF = geocode!.UF
                     self.routesQueryService.getRouteByCoordinates(originLat: self.userLatitude, originLnt: self.userLongitude, destinationLat: self.destinationLatitude!, destinationLtn: self.destinationLongitude!, completion: { (route, error) in
                         if error == nil {
                             self.drawRouteOnMap(APIroute: route!)
-                            self.getRoutePointsCoordinates(APIroute: route!)
+                            self.getRoutePointsCoordinates(APIroute: route!, state: self.destinationUF ?? self.userUF)
+//                            self.showMarkersForRoute(originUF: self.userUF, destinationUF: self.destinationUF!)
                         }
                         else
                         {
