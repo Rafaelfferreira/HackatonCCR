@@ -1,4 +1,4 @@
-# HackatonCCR
+# HackathonCCR
 
 ![](https://img.shields.io/badge/swift-5.2-orange.svg)
 ![](https://img.shields.io/badge/swiftUI-blue.svg)
