@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XPD-Bf-hSH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qmi-eO-jE6">
+            <objects>
+                <navigationController id="XPD-Bf-hSH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1t-Cl-bop">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YKx-Ln-tbu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aF-FQ-qTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2164" y="-57"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HackatonCCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA7-3r-uXT">
+                                <rect key="frame" x="166" y="209" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To Maps"/>
+                                <connections>
+                                    <segue destination="BWl-IO-kHW" kind="show" id="YSk-Hn-oh1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" " id="nMm-NB-vaF"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-157" y="139"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="yRf-hO-qnk">
+            <objects>
+                <viewController id="BWl-IO-kHW" customClass="MapVC" customModule="HackatonCCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xja-dr-uCL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOb-44-7xP" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NOb-44-7xP" secondAttribute="bottom" id="5kp-LS-LI7"/>
+                            <constraint firstItem="NOb-44-7xP" firstAttribute="trailing" secondItem="DWJ-cG-NB3" secondAttribute="trailing" id="Xpv-5N-T5b"/>
+                            <constraint firstItem="NOb-44-7xP" firstAttribute="leading" secondItem="DWJ-cG-NB3" secondAttribute="leading" id="nRD-kv-w8b"/>
+                            <constraint firstItem="NOb-44-7xP" firstAttribute="top" secondItem="DWJ-cG-NB3" secondAttribute="top" id="wlH-P5-k78"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DWJ-cG-NB3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bzl-wO-ftZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qb5-Rz-3Xh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="NOb-44-7xP" id="BBy-di-lbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yv-QJ-wne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

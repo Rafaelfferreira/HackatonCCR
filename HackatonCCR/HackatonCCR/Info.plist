@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>O app utiliza sua localizacao para encontrar pontos de interesse perto de voce</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>O app precisa de sua localizacao para encontrar pontos de interesse perto de voce</string>
 </dict>
 </plist>
